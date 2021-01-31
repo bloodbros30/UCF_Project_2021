@@ -1,25 +1,11 @@
-* What will the product do?
+This webapp will function similarly to a forum style websites such as reddit or apps like discord by allowing users to join chats concerning topics in which they are interested. What we plan on creating is creating a webapp that contains open group chats that you are allowed to join at any time. 
 
-We will make a webapp that has open group chats that you are allowed to join at any time.
-You are allowed to create any group chat and join any other group chat using tags and a front end searching hub.
-In these group chats you can send and receive open messages and files to everyone inside the group.
-We could potentially have private groups with restricted access.
+Unlike other websites, our plan is to make our web app more appealing and unique by embracing openness of the discussions and availability to join any group chat. This is opposed to other competitors like discord where an invitation is often required to join a server. It differs from reddit in the more lax and personal “group-chat” type atmosphere it will provide in an unmoderated fashion. 
+
+You are allowed to create any group chat and join any other group chat using tags and a user searching hub. In these group chats you can send and receive open messages and files to everyone inside the group. We can even create private groups where a password or invite is needed to join the group chat.
+
+This product is being created in order to give a more direct way of talking to groups of people about a particular topic without having to jump through pages of forums. Having to search through pages of subreddits or deep dive to find a discord about the topic at hand can be tiresome, this product aims to cut that process down. 
+
+We plan on making this app for those looking for a casual chatting experience with related topics. Groups that are looking for quick group chat functionality and communities of people who just chat about similar topics/subjects.
 
 
-* Why are you creating this particular product?
-This product is being created in order to give a more direct way of talking to groups of people about a particular topic
-without having to jump through pages of forums. Having to search through pages of subreddits or deep dive to find a discord
-about the topic at hand can be tiresome, this product aims to cut that process down. 
-
-* Who will benefit from this product?
-
-Those looking for a casual chatting experience with related topics.
-Groups that are looking for quick group chat functionality and communities of people who just chat about similar topics/subjects.
-
-* How does the product compare against similar products already on the market?
-
-This webapp will function similarly to forum style websites such as reddit or apps like discord 
-by allowing users to join chats concerning topics in which they are interested. A distinction between this 
-webapp and those other services, however, is the openness of the discussions as opposed to discord where an 
-invitation is often required to join a server. It differs from reddit in the more lax and personal “group-chat” 
-type atmosphere it will provide in an unmoderated fashion.
