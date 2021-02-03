@@ -10,6 +10,8 @@ provide in an unmoderated fashion. This lax and quick discussion style with inte
 Other feautures include private discussion availability and subgroups for discussions. Groups that are looking for quick 
 group chat functionality and communities of people who just chat about similar topics/subjects will enjoy our webapp. 
 
+[Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
+
 Team Members
 
 Alejandro Rubio
