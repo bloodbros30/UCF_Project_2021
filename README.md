@@ -1,6 +1,6 @@
-# UCF_Project_2021
+# UCF COP 4331 Project
 
-## Product Vision Statement
+# Product Vision Statement
 
 This product is a webapp created for realtime chat interactions betweeen users interested in similar topics and discussions.
 Unlike other websites, our plan is to make our web app more appealing and unique by embracing openness of the discussions 
@@ -10,10 +10,11 @@ provide in an unmoderated fashion. This lax and quick discussion style with inte
 Other feautures include private discussion availability and subgroups for discussions. Groups that are looking for quick 
 group chat functionality and communities of people who just chat about similar topics/subjects will enjoy our webapp. 
 
-[Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
+# Sprint 1
+- [Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
 
 
-## Team Members
+### Team Members
 
 - Alejandro Rubio
 - Hunter Cheung
