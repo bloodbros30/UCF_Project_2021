@@ -12,7 +12,7 @@ group chat functionality and communities of people who just chat about similar t
 
 # Sprint 1
 - [Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
-
+- [Trello](https://trello.com/b/qaRvqV9A/project-management)
 
 ### Team Members
 
