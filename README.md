@@ -12,10 +12,11 @@ group chat functionality and communities of people who just chat about similar t
 
 [Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
 
-Team Members
 
-Alejandro Rubio
-Hunter Cheung
-Jerome Konieczka
-Nelson Reina
-Steve Montes
+## Team Members
+
+- Alejandro Rubio
+- Hunter Cheung
+- Jerome Konieczka
+- Nelson Reina
+- Steve Montes
