@@ -1,0 +1,9 @@
+.sidebar {
+  border-right: 1px solid blue;
+  background-color: blue;
+  flex: 0.05;
+  /* min-width: 250px; */
+
+ 
+}
+
