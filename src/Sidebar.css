@@ -1,9 +1,54 @@
-.sidebar {
+.Sidebar {
   border-right: 1px solid blue;
   background-color: blue;
   flex: 0.05;
-  /* min-width: 250px; */
+   /*min-width: 250px;*/
 
- 
+
 }
 
+
+.column{
+
+
+  width: 100%;
+  height: auto;
+  padding: 0;
+
+
+
+}
+
+
+
+
+.column .button{
+
+  font-family: "Comic Sans MS";
+  border: 2px solid black;
+  padding: 0;
+  height: auto;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  background-color: orange;
+  align-content: center;
+
+}
+
+
+
+.column .button:hover{
+
+cursor: pointer;
+background-color: #CE8A3A;
+
+
+}
+
+.column #clicked {
+
+  background-color: #CE8A3A;
+
+}
