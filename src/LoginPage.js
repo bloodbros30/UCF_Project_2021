@@ -10,22 +10,22 @@ const LoginPage = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState(false);
-    
+
     const clearInputs = () => {
         setEmail('');
         setPassword('');
     }
-    
+
     const clearErrors = () => {
         setEmailError('');
         setPasswordError('');
     }
-    
+
     const handleLogin = () => {
         clearErrors();
         fire
             .auth()
-            .signInWithEmailandPassword(email, password)
+            .signInWithEmailAndPassword(email, password)
             .catch(err =>{
                 switch(err.code) {
                     case "auth/invalid-email":
@@ -39,12 +39,12 @@ const LoginPage = () => {
                     }
                 });
             };
-    
+
     const handleSignup = () => {
         clearErrors();
         fire
             .auth()
-            .createUserWithEmailandPassword(email, password)
+            .createUserWithEmailAndPassword(email, password)
             .catch(err =>{
                 switch(err.code) {
                     case "auth/email-already-in-use":
@@ -57,11 +57,11 @@ const LoginPage = () => {
                     }
             });
         };
-    
+
     const handleLogout = () => {
         fire.auth().signOut();
     }
-    
+
     const authListener = () => {
         fire.auth().onAuthStateChanged(user => {
             if(user){
@@ -73,23 +73,23 @@ const LoginPage = () => {
             }
         });
     };
-    
+
     useEffect(()=> {
         authListener();
     }, [])
     return (
         <div className = "LoginPage">
-            <Login 
-                email = {email} 
-                setEmail = {setEmail} 
+            <Login
+                email = {email}
+                setEmail = {setEmail}
                 password = {password}
                 setPassword = {setPassword}
-                handleLogin = {handleLogin} 
-                handleSignup = {handleSignup} 
-                hasAccount = {hasAccount} 
-                setHasAccount = {setHasAccount} 
-                emailError = {emailError} 
-                passwordError = {passwordError} 
+                handleLogin = {handleLogin}
+                handleSignup = {handleSignup}
+                hasAccount = {hasAccount}
+                setHasAccount = {setHasAccount}
+                emailError = {emailError}
+                passwordError = {passwordError}
             />
         </div>
     );
