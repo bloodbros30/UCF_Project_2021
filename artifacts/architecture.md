@@ -25,7 +25,7 @@ See Code Complete, Chapter 3
 
 # User Interface Design
 
-![alt text]https://cdn.discordapp.com/attachments/803334690009382935/810376518823444490/uiDesign.PNG
+![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810609506098610206/unknown.png)
 
 We have three main sections to the website. The Sidebar on the left can be used to navigate between searching for group chats, updating your profile, viewing chats, and signing out. The middle section contains the list of group chats that the user has joined and they can be selected so they appear on the right. The chat window section shows the chat history of the selected chat and is updated in real time. The User can send a message from the box at the bottom at the buttom of the screen
 
