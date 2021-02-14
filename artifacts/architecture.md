@@ -9,7 +9,7 @@ Our website will provide the user with a user interface so they can login and an
 
 # Code Design
 
-![alt text](classDiagram.pdf)
+![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810605494694969365/download.png)
 
 # Data Design
 
