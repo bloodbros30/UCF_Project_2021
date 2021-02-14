@@ -18,14 +18,11 @@ The chat history is stored as a collection of strings under the subroot of the c
 # Data Design
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
+Firebase is externally storing the login email and passwords as well as the chat history for each individual chat. Our website is keeping track of one user internally while also externally going through firebase for the ChatIds that are associated with the logged in user. The chatIds are linked to the chat history and can be displayed for user to see.
 
-See Code Complete, Chapter 3
 
-# Business Rules
 
-You should list the assumptions, rules, and guidelines from external sources that are impacting your program design. 
 
-See Code Complete, Chapter 3
 
 # User Interface Design
 
@@ -34,60 +31,3 @@ See Code Complete, Chapter 3
 We have three main sections to the website. The Sidebar on the left can be used to navigate between searching for group chats, updating your profile, viewing chats, and signing out. The middle section contains the list of group chats that the user has joined and they can be selected so they appear on the right. The chat window section shows the chat history of the selected chat and is updated in real time. As a user you would want to send messages and you can do so at the bottom of the screen on the right in the small box.
 
 
-# Resource Management
-
-See Code Complete, Chapter 3
-
-# Security
-
-See Code Complete, Chapter 3
-
-# Performance
-
-See Code Complete, Chapter 3
-
-# Scalability
-
-See Code Complete, Chapter 3
-
-# Interoperability
-
-See Code Complete, Chapter 3
-
-# Internationalization/Localization
-
-See Code Complete, Chapter 3
-
-# Input/Output
-
-See Code Complete, Chapter 3
-
-# Error Processing
-
-See Code Complete, Chapter 3
-
-# Fault Tolerance
-
-See Code Complete, Chapter 3
-
-# Architectural Feasibility
-
-See Code Complete, Chapter 3
-
-# Overengineering
-
-See Code Complete, Chapter 3
-
-# Build-vs-Buy Decisions
-
-This section should list the third party libraries your system is using and describe what those libraries are being used for.
-
-See Code Complete, Chapter 3
-
-# Reuse
-
-See Code Complete, Chapter 3
-
-# Change Strategy
-
-See Code Complete, Chapter 3
