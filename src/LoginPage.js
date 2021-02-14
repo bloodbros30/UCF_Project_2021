@@ -1,99 +1,102 @@
-import React, {useState, useEffect} from "react";
-import fire from './fire';
-import Login from './Login';
+import React, { useState, useContext, useEffect } from "react";
+import { auth } from "./fire";
+import LandingPage from "./LandingPage.js";
 import "./LoginPage.css";
+import { UserContext } from "./UserProvider";
 
 const LoginPage = () => {
-    const [User, setUser] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const [passwordError, setPasswordError] = useState('');
-    const [hasAccount, setHasAccount] = useState(false);
+  const user = useContext(UserContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [hasAccount, setHasAccount] = useState(false);
 
-    const clearInputs = () => {
-        setEmail('');
-        setPassword('');
-    }
+  const clearInputs = () => {
+    setEmail("");
+    setPassword("");
+  };
 
-    const clearErrors = () => {
-        setEmailError('');
-        setPasswordError('');
-    }
+  const clearErrors = () => {
+    setEmailError("");
+    setPasswordError("");
+  };
 
-    const handleLogin = () => {
-        clearErrors();
-        fire
-            .auth()
-            .signInWithEmailAndPassword(email, password)
-            .catch(err =>{
-                switch(err.code) {
-                    case "auth/invalid-email":
-                    case "auth/user-disabled":
-                    case "auth/user-not-found":
-                        setEmailError(err.message);
-                        break;
-                    case "auth/wrong-password":
-                        setPasswordError(err.message);
-                        break;
-                    }
-                });
-            };
+  function handleSignIn() {
+    auth.signInWithEmailAndPassword(email, password);
+  }
 
-    const handleSignup = () => {
-        clearErrors();
-        fire
-            .auth()
-            .createUserWithEmailAndPassword(email, password)
-            .catch(err =>{
-                switch(err.code) {
-                    case "auth/email-already-in-use":
-                    case "auth/invalid-email":
-                        setEmailError(err.message);
-                        break;
-                    case "auth/weak-password":
-                        setPasswordError(err.message);
-                        break;
-                    }
-            });
-        };
+  const handleSignup = () => {
+    clearErrors();
+    auth.createUserWithEmailAndPassword(email, password).catch((err) => {
+      switch (err.code) {
+        case "auth/email-already-in-use":
+        case "auth/invalid-email":
+          setEmailError(err.message);
+          break;
+        case "auth/weak-password":
+          setPasswordError(err.message);
+          break;
+      }
+    });
+  };
 
-    const handleLogout = () => {
-        fire.auth().signOut();
-    }
+  const handleLogout = () => {
+    auth.signOut();
+  };
 
-    const authListener = () => {
-        fire.auth().onAuthStateChanged(user => {
-            if(user){
-                clearInputs();
-                setUser(user);
-            }
-            else {
-                setUser("");
-            }
-        });
-    };
-
-    useEffect(()=> {
-        authListener();
-    }, [])
-    return (
-        <div className = "LoginPage">
-            <Login
-                email = {email}
-                setEmail = {setEmail}
-                password = {password}
-                setPassword = {setPassword}
-                handleLogin = {handleLogin}
-                handleSignup = {handleSignup}
-                hasAccount = {hasAccount}
-                setHasAccount = {setHasAccount}
-                emailError = {emailError}
-                passwordError = {passwordError}
+  return (
+    <div className="LoginPage">
+      {user ? (
+        <LandingPage />
+      ) : (
+        <section className="login">
+          <div className="loginContainer">
+            <label>Username</label>
+            <input
+              type="text"
+              autoFocus
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-        </div>
-    );
-
+            <p className="errorMsg">{emailError}</p>
+            <label>Password</label>
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <p className="errorMsg">{passwordError}</p>
+            <div className="btnContainer">
+              {hasAccount ? (
+                <>
+                  <button onClick={() => handleSignIn()}>Sign In</button>
+                  <p>
+                    Don't have an account?{" "}
+                    <span onClick={() => setHasAccount(!hasAccount)}>
+                      Sign up
+                    </span>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <button onClick={handleSignup}>Sign Up</button>
+                  <p>
+                    Have an account?{" "}
+                    <span onClick={() => setHasAccount(!hasAccount)}>
+                      Sign in
+                    </span>
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+  );
 };
 
 export default LoginPage;

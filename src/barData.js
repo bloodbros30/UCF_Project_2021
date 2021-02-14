@@ -1,43 +1,21 @@
 import React from "react";
 
-
-
 export const barData = [
+  {
+    name: "Friends",
 
-{
+    link: "/placeholderLink1",
+  },
 
-  name: "Friends",
+  {
+    name: "Profile",
 
-  link: "/placeholderLink1"
+    link: "/placeholderLink2",
+  },
 
-},
+  {
+    name: "Chats",
 
-{
-
-  name: "Profile",
-
-  link: "/placeholderLink2"
-
-
-
-},
-
-
-
-{
-
-
-  name: "Chats",
-
-
-  link: "/placeholderLink3"
-
-
-}
-
-
-
-
-
-
-]
+    link: "/placeholderLink3",
+  },
+];
