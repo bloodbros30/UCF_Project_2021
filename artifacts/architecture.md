@@ -17,7 +17,7 @@ The chat history is stored as a collection of strings under the subroot of the c
 
 # Data Design
 
-If you are using a database, you should have a basic Entity Relationship Diagram (ERD) in this section. This diagram should describe the tables in your database and their relationship to one another (especially primary/foreign keys), including the columns within each table. 
+(https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
 
 See Code Complete, Chapter 3
 
