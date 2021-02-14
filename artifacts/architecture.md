@@ -6,6 +6,10 @@
 # Initial Architectural Description
 Our website will provide the user with a user interface so they can login and and signup for our website. They can browse a list of group chats to join and once they join a group chat they have the option of sending and receiving messages in the group chat. Our website will use Firebase to quarry information to be displayed to the user depending on which group chat the user wants to participate in. Firebase will handle most of our data as well as the user login and logout system. Our website will constantly communicate with our firebase in many different ways such as to keep the chat updated, update the group chat list, handle login and logout, and etc. 
 
+The login page communicates with the firebase authentication system to handle the login and logout of the user and transfers user information over to our website. 
+Our website then quarrys the user's list of chats which are stored in firebase and displays only the chats that is choosen to be displayed.
+The chat history is stored as a collection of strings under the subroot of the chatID and is loaded up by our website in real time.
+
 
 # Code Design
 
@@ -29,7 +33,6 @@ See Code Complete, Chapter 3
 
 We have three main sections to the website. The Sidebar on the left can be used to navigate between searching for group chats, updating your profile, viewing chats, and signing out. The middle section contains the list of group chats that the user has joined and they can be selected so they appear on the right. The chat window section shows the chat history of the selected chat and is updated in real time. As a user you would want to send messages and you can do so at the bottom of the screen on the right in the small box.
 
-See Code Complete, Chapter 3
 
 # Resource Management
 
