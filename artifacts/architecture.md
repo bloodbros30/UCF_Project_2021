@@ -9,7 +9,7 @@ Our website will provide the user with a user interface so they can login and an
 
 # Code Design
 
-![alt text](classDiagram.jpg)
+![alt text](classDiagram.pdf)
 
 # Data Design
 
