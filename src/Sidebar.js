@@ -9,15 +9,11 @@ import {
 } from "react-router-dom";
 
 
-function logOut()
+async function logOut()
 {
-
-  
-  auth.signOut();
+  await auth.signOut();
   localStorage.clear();
-  window.location.reload(false);
-  
-  
+  window.location.reload();
 }
 
 function Sidebar() {
