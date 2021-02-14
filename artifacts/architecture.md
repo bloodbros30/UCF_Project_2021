@@ -17,7 +17,7 @@ The chat history is stored as a collection of strings under the subroot of the c
 
 # Data Design
 
-(https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
 
 See Code Complete, Chapter 3
 
