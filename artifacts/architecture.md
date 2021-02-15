@@ -15,6 +15,8 @@ The chat history is stored as a collection of strings under the subroot of the c
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810605494694969365/download.png)
 
+There will be major classes needed for the user's page and chat. The user's page will give functionality where they can change their own profile picture and username. The chat class will include the given chats name, relevant tags, list of members, and there will be subclasses depending on whether the given chat is a group chat or direct message. 
+
 # Data Design
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
