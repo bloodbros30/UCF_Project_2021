@@ -10,7 +10,9 @@ provide in an unmoderated fashion. This lax and quick discussion style with inte
 Other feautures include private discussion availability and subgroups for discussions. Groups that are looking for quick 
 group chat functionality and communities of people who just chat about similar topics/subjects will enjoy our webapp. 
 
-# Sprint 1
+#Sprint 1 - we messed this one up
+
+# Sprint 2
 - [Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
