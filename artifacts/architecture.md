@@ -1,7 +1,11 @@
 
 # Program Organization
 
-![alt text](https://cdn.discordapp.com/attachments/803334690009382935/810592705838710794/architecturalDesign.png)
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813153807445917776/Contextdiagram.png)
+
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813159420158017566/Containerdiagram.png)
+
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813167170577235998/componentdiagram.png)
 
 # Initial Architectural Description
 Our website will provide the user with a user interface so they can login and and signup for our website. They can browse a list of group chats to join and once they join a group chat they have the option of sending and receiving messages in the group chat. Our website will use Firebase to quarry information to be displayed to the user depending on which group chat the user wants to participate in. Firebase will handle most of our data as well as the user login and logout system. Our website will constantly communicate with our firebase in many different ways such as to keep the chat updated, update the group chat list, handle login and logout, and etc. 
