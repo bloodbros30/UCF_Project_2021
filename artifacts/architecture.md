@@ -22,6 +22,12 @@ This is our Container Diagram which demonstrates necessary processes that are ne
 
 This is our Component diagram which decomposes our container diagram into even more modular blocks.The back-end and database storage can't really be decomponsed further, however, The front-end side of our application is made up of all components interating with each other to provide a working website. For example, there's a component made to send and recerive messages to the database and theres also a seperate component to be able to customize your profile.
 
+| User Story                                                                                   	| Block     	|
+|----------------------------------------------------------------------------------------------	|-----------	|
+| As a consumer, I want to be able to customize my public name and profile picture.            	| User Info 	|
+| As a consumer, I want to be able to search for group chats using their names or certain tags 	| Sidebar   	|
+| As a consumer I want to be able to sign in and and sign out of my profile.                   	| Sign In   	|
+
 # Architectural Description
 Our website will provide the user with a user interface so they can login and and signup for our website. They can browse a list of group chats to join and once they join a group chat they have the option of sending and receiving messages in the group chat. Our website will use Firebase to quarry information to be displayed to the user depending on which group chat the user wants to participate in. Firebase will handle most of our data as well as the user login and logout system. Our website will constantly communicate with our firebase in many different ways such as to keep the chat updated, update the group chat list, handle login and logout, and etc. 
 
