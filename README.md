@@ -20,7 +20,7 @@ group chat functionality and communities of people who just chat about similar t
 
 
 # Sprint 3
-- [Source Code] (/src)
+- [Source Code] (/src/LoginPage.js)
 - [Tests and Unit Tests] (/src/unitTests)
 - [Burndown chart](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
 - [Velocity chart](https://docs.google.com/spreadsheets/d/1jKwPLi_FV2iHeRY4Cpr7XaL948TdbM8p8v62qhJ1EL8/edit?usp=sharing)
