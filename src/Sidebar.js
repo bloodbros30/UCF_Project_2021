@@ -28,11 +28,16 @@ function Sidebar() {
               id={window.location.pathname == val.link ? "clicked" : " "}
               onClick={() => {
                // window.location.pathname = val.link;
+               /*this is here as a placeholder so that in the future we may
+               connect it to other components*/
               }}
             >
-              <div>{val.name}</div>
+ 
+              <div id="img">{val.image}</div> {" "}
 
-              
+              <div id="text">{val.name}</div>
+
+
             </li>
           );
         })}
@@ -41,9 +46,9 @@ function Sidebar() {
         <button type="button" onClick={logOut}>
           LogOut!
          </button>
-     
+
      </Link>
-    
+
     </div>
   );
 }
