@@ -26,8 +26,6 @@ Firebase is externally storing the login email and passwords as well as the chat
 
 
 
-
-
 # User Interface Design
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810609506098610206/unknown.png)

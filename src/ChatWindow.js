@@ -4,9 +4,23 @@ import "./ChatWindow.css";
 function ChatWindow() {
   return (
     <div className="ChatWindow">
-
-        window
-        
+      <div className = "conversation-list">
+        convo list
+      </div>
+      <div className = "chat-title">
+        chat title
+      </div>
+      <div className = "text-form">
+        text form
+      </div>
+      <div className= "new-message-container">
+        new msg container
+      </div>
+      <div className= "search-bar">
+        search bar
+      </div>
+      <div className="chat-message-list">
+      </div>
     </div>
   );
 }
