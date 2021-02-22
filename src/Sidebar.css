@@ -1,54 +1,36 @@
 .Sidebar {
-  border-right: 1px solid blue;
-  background-color: blue;
-  flex: 0.05;
-   /*min-width: 250px;*/
-
-
+  border-right: 1px solid #7f7fd5;
+  background-color: #7f7fd5;
+  flex: 0.1;
 }
 
-
+/*
 .column{
-
-
   width: 100%;
   height: auto;
   padding: 0;
-
-
-
 }
 
-
-
-
 .column .button{
-
   font-family: "Comic Sans MS";
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 0;
   height: auto;
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  color: red;
-  background-color: orange;
+  color: black;
+  background-color: #7f7fd5;
   align-content: center;
-
 }
-
 
 
 .column .button:hover{
-
 cursor: pointer;
 background-color: #CE8A3A;
-
-
 }
 
 .column #clicked {
-
   background-color: #CE8A3A;
-
 }
+*/
