@@ -1,0 +1,8 @@
+1.) Sign in or sign up to the website.
+
+2.)Navigate your cursor to the sidebar menu.
+
+3.)Hover the mouse over each component.
+
+4.)If the buttons change shades then the front-end functionality is working.
+
