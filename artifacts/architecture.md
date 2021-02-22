@@ -63,8 +63,22 @@ Firebase is externally storing the login email and passwords as well as the chat
 
 # User Interface Design
 
+MAIN PAGE
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810609506098610206/unknown.png)
 
-We have three main sections to the website. The Sidebar on the left can be used to navigate between searching for group chats, updating your profile, viewing chats, and signing out. The middle section contains the list of group chats that the user has joined and they can be selected so they appear on the right. The chat window section shows the chat history of the selected chat and is updated in real time. As a user you would want to send messages and you can do so at the bottom of the screen on the right in the small box.
+We have three main sections to the main section of the website. The Sidebar on the left can be used to navigate between searching for group chats, updating your profile, viewing chats, and signing out. The middle section contains the list of group chats that the user has joined and they can be selected so they appear on the right. The chat window section shows the chat history of the selected chat and is updated in real time. As a user you would want to send messages and you can do so at the bottom of the screen on the right in the small box.
+
+PROFILE PAGE
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813235406266171452/art.png)
+
+The profile page has the basic functions to display your profile information and enables you to edit it. There are 3 buttons that the user can interact with, the log out button which logs them out of their account and the website, the edit profile button which will enable you to edit your details inside a test window, and the deleted profile button which will remove the account from our database.
+
+| User Story                                                                                                    	| Block        	|
+|---------------------------------------------------------------------------------------------------------------	|--------------	|
+| As a consumer, I want to be able to have my own unique profile that I am able to customize.                   	| Profile Page 	|
+| As a user I want to be able to easily navigate the website with navigation tools that are visually appealing. 	| Main Page    	|
+
+
+
 
 
