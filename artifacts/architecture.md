@@ -81,28 +81,28 @@ The profile page has the basic functions to display your profile information and
 
 
 
-#Resource Management
+# Resource Management
 The limited resources of database threads are going to be handled by implementing firebase. This service is run by google, who provide ample cloud storage in terms of storing message log data, but it will also handle any stresses put on the system by a larger user base requiring more database connections. In this way the application will never have to be doing too complex of resource management on its on, but rather firebase will ensure the data and connection resources are readily available. It is also worth noting that this web-app will likely not be used by many people.
 
 
 
 
 
-
-#Security
+ 
+# Security
 The chat app will implement reactJS as well as firebase. These two frameworks will help to ensure the security of user data. Since the application implements firebase, the data is stored in an encrypted fashion as per goolgle's firebase security standards, meaning any personally identifiable information a person has linked to their account on this app will be secured by said encryption. Furthermore, the app will implement the standard https protocol to ensure safe communication between users and the chat servers.
 
 
 
 
 
-#Performance
+# Performance
 The goal of this app is to allow for real-time communication between people with similar interests; thus, performance is a high priority. Again, implementing firebase will allow for quick access to groupchat message data. We will also use methods that limit the number of previous messages loaded at a time to reduce message loading times in addition to allowing for less stress to be put on the database servers.
 
 
 
 
-#Scalability
+# Scalability
 
 Scalability of this group chat app is guaranteed by the ample data provided by the firebase service, since the group does not need to provide their own server for data storage and handling a large userbase, the app is easily scalable to a larger user base of group chatters because the apps main functionality requires no scaling up the only issue would be data storage and large network traffic. Both of these issues are resolved by implementing firebase.
 
@@ -111,7 +111,7 @@ Scalability of this group chat app is guaranteed by the ample data provided by t
 
 
 
-#Interoperability
+# Interoperability
 
 The chat app will interact with a remote server containing a database, this will be achieved via google firebase.
 
@@ -121,14 +121,14 @@ The chat app will interact with a remote server containing a database, this will
 
 
 
-#Internationalization/Localization
+# Internationalization/Localization
 
 The app would require some translation of UI components in order to be localized. However, given the groupchat nature of the app, and the unicode support of javascript and HTML5, the app would not need other functionality to be translated. 
 
 
 
 
-#Input/Output
+# Input/Output
 The app uses standard input output as provided by reactJS as well as javascript, HTML5, and CSS. The I/O for this app will be focused on a just-in-time reading scheme. I/O errors are handled at the field level. 
 
 
@@ -136,7 +136,7 @@ The app uses standard input output as provided by reactJS as well as javascript,
 
 
 
-#Error Processing
+# Error Processing
 
 
 
@@ -144,7 +144,7 @@ The app uses standard input output as provided by reactJS as well as javascript,
 
 
 
-#Fault Tolerance
+# Fault Tolerance
 
 
 
@@ -155,21 +155,21 @@ The app uses standard input output as provided by reactJS as well as javascript,
 
 
 
-#Architectural Feasibility
+# Architectural Feasibility
 
 
 
 
 
-#Build-vs-Buy Decisions
+# Build-vs-Buy Decisions
 
 
 
 
-#Reuse
+# Reuse
 
 
 
-#Change Strategy
+# Change Strategy
 
 
