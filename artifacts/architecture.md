@@ -3,13 +3,20 @@
 
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813153807445917776/Contextdiagram.png)
 
-This is our context diagram which shows the relationship between the user, our website, and our backend which is Firebase. The user communicates and interacts with the react web application and never sees the backend. Our website communicates between our backend to provide information such as chat history and profile information.
+This is our Context diagram which shows the relationship between the user, our website, and our backend which is Firebase. The user communicates and interacts with the react web application and never sees the backend. Our website communicates between our backend to provide information such as chat history and profile information.
 | User Story                                                                                                    	| Block             	|
 |---------------------------------------------------------------------------------------------------------------	|-------------------	|
 | As a consumer, I want to be able to have my own unique profile that I am able to customize.                   	| Firebase System   	|
 | As a user I want to be able to easily navigate the website with navigation tools that are visually appealing. 	| React Chat WebApp 	|
 
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813159420158017566/Containerdiagram.png)
+
+This is our Container Diagram which demonstrates necessary processes that are needed to be run in the background. The containers we will be using for out project are React using Node.Js and firestore and authentication from Firebase. Firebase will server as our main database to store all the user information, chat history, profile customization, etc. React is our framework and will assist us in development by having a lot of prebuild functionalility and assisting in making the website look visually appealing.
+| User Story                                                                                	| Block                   	|
+|-------------------------------------------------------------------------------------------	|-------------------------	|
+| As a consumer I want to be able to sign in and and sign out of my profile.                	| Authentication          	|
+| As a user, I want to be able to read and send messages in the group chats I am a part of. 	| Single Page Application 	|
+
 
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813167170577235998/componentdiagram.png)
 
