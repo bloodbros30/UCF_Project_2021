@@ -20,8 +20,8 @@ group chat functionality and communities of people who just chat about similar t
 
 
 # Sprint 3
-- [Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
-- [Velocity charts](https://docs.google.com/spreadsheets/d/1jKwPLi_FV2iHeRY4Cpr7XaL948TdbM8p8v62qhJ1EL8/edit?usp=sharing)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
+- [Velocity chart](https://docs.google.com/spreadsheets/d/1jKwPLi_FV2iHeRY4Cpr7XaL948TdbM8p8v62qhJ1EL8/edit?usp=sharing)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
 - [DEMO](https://youtu.be/FGrOQT4gVEI)
