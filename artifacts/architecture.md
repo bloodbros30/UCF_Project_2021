@@ -3,6 +3,12 @@
 
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813153807445917776/Contextdiagram.png)
 
+This is our context diagram which shows the relationship between the user, our website, and our backend which is Firebase. The user communicates and interacts with the react web application and never sees the backend. Our website communicates between our backend to provide information such as chat history and profile information.
+| User Story                                                                                                    	| Block             	|
+|---------------------------------------------------------------------------------------------------------------	|-------------------	|
+| As a consumer, I want to be able to have my own unique profile that I am able to customize.                   	| Firebase System   	|
+| As a user I want to be able to easily navigate the website with navigation tools that are visually appealing. 	| React Chat WebApp 	|
+
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813159420158017566/Containerdiagram.png)
 
 ![alt text](https://cdn.discordapp.com/attachments/803334690009382935/813167170577235998/componentdiagram.png)
