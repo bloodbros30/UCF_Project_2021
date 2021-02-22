@@ -133,48 +133,35 @@ The app uses standard input output as provided by reactJS as well as javascript,
 
 
 
-
-
-
 # Error Processing
 
-
-
-
-
+Due to our fairly simple website any big errors are processed by throwing an exception and essentially stopping the website. We do not expect to need any type of error correcting code or exception handlers because our simple website should be rebust enough to not encounter these website breaking errors in our final product. We provide manual and unit test to try to discover any bugs in our code.
 
 
 # Fault Tolerance
 
-
-
-
-
-
-
-
+Our fault-tolerate draws the line on bugs that do not disturb the main functionality of our website. Small bugs that make the website look ugly or create an inconvenience for the user will be tolerated for now. Eventually we will work towards fixing almost all the bugs by starting out at the ones that disrupt functionality.
 
 
 # Architectural Feasibility
 
-
-
+This does not apply to us because our application is very feasible and has beeen done before in the industry by various companies.
 
 
 # Overengineering
 
-
+Our program will tend to side doing the simplest thing that work at first. Once we have a strong code foundation we can further develop and improve on our code to remove more bugs and create new features.
 
 
 # Build-vs-Buy Decisions
 
-
-
+We are not using any third party software for our code so this does not apply.
 
 # Reuse
 
-
+We reuse code from React to serve as our framework to assist in developing the app. And we also used the prebuilt functuality that firebase provides us for our backend
 
 # Change Strategy
 
+Our project can be modified to include other features and functuality. We have discussed plans to create private group chats, direct messages, and other user to user communcation neans. We don't know the limitations of our system yet since we just started but many changes could still be added such as creating our own backend.
 
