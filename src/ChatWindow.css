@@ -12,7 +12,7 @@ body {
 
 html {
 font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+background: linear-gradient(90deg, rgba(47,53,66,1) 26%, rgba(164,176,190,1) 100%);
 }
 
 body {
@@ -42,52 +42,51 @@ body {
     max-height: 800;
     width: 100%;
     height: 90vh;
-    background: white;
+    background: #dfe4ea;
     border-radius: 20px;
   }
   
 
   .conversation-list, .new-message-container, .search-bar {
-    background-color: #5786C8;
+    background-color: #70a1ff;
   }
 
   .chat-title,.text-form {
-    background-color: #eee; 
+    
+    background: linear-gradient(90deg, rgba(255,99,72,1) 27%, rgba(255,127,80,1) 100%);
+    
   }
 
   .text-form {
-    background: #eee;
     grid-area: text-form;
     justify-content: center;
     box-shadow: 1px 1px 3px -1px black;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0 0 10px 0;
   }
 
   .chat-title {
     grid-area: chat-title;
     border-radius: 0 10px 0 0;
     box-shadow: 0 1px 3px -1px black;
-    border-radius: 10px;
   }
 
   .conversation-list {
     grid-area: convolist;
     border-top: black;
-    border-radius: 0px 10px 10px 0;
     box-shadow:  1px 1px -1px black;
     z-index: 1;
   }
 
   .new-message-container {
     grid-area: msgcontainer;
-    border-radius: 0 5px 0px px;
     z-index: 2;
+    /*border-radius: 0 0 0 10px;*/
   }
 
   .search-bar
   {
     grid-area: search;
-    border-radius: 10px 0 10px 0;
+    /*border-radius: 10px 0 0 0;*/
     box-shadow: 0 1px 3px -1px black;
     z-index: 1;
   }

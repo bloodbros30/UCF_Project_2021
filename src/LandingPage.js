@@ -10,6 +10,7 @@ function LandingPage({ handleLogout }) {
       <Sidebar />
       <ChatOptions />
       <ChatWindow />
+      
     </div>
   );
 }
