@@ -19,6 +19,20 @@ group chat functionality and communities of people who just chat about similar t
 - [DEMO](https://youtu.be/FGrOQT4gVEI)
 
 
+# Sprint 3
+- [Velocity and Burndown charts](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
+- [Trello](https://trello.com/b/qaRvqV9A/project-management)
+- [Architecture & Design Documents](/artifacts/architecture.md)
+- [DEMO](https://youtu.be/FGrOQT4gVEI)
+
+# Task Allocation
+- Alejandro Rubio - Start ChatWindow Component
+- Hunter Cheung - Continue working on Sidebar Component
+- Jerome Konieczka - Start ChatOptions Component
+- Nelson Reina - Start Chat Search feature
+- Steve Montes - Start profile customization page
+
+
 
 ### Team Members
 
