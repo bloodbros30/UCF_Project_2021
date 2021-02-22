@@ -40,14 +40,24 @@ The chat history is stored as a collection of strings under the subroot of the c
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810605494694969365/download.png)
 
-There will be major classes needed for the user's page and chat. The user's page will give functionality where they can change their own profile picture and username as well as a list of their group chats. The chat class will record the messages sent, who sent them, and when they were sent. 
+These will be major classes needed for the user's page and chat. The user's page will give functionality where they can change their own profile picture and username as well as a list of their group chats. The chat class will record the messages sent, who sent them, and when they were sent. The design also shows the functionalitty the user is able to have such as the ability to create groupchats, direct messages, and join multiple chats. 
+| User Story                                                                                 	| Block 	|
+|--------------------------------------------------------------------------------------------	|-------	|
+| As a consumer, I want to be able to join a group chat I am interested in                   	| User  	|
+| As a user I want to be able to send a private/ direct message to a friend on the platform. 	| User  	|
+
 
 
 # Data Design
 
 ![alt text](https://cdn.discordapp.com/attachments/548034934422634496/810615103840976896/unknown.png)
 
-Firebase is externally storing the login email and passwords as well as the chat history for each individual chat. Our website is keeping track of one user internally while also externally going through firebase for the ChatIds that are associated with the logged in user. The chatIds are linked to the chat history and can be displayed for user to see.
+Firebase is externally storing the login email and passwords as well as the chat history for each individual chat. Our website is keeping track of one user internally while also externally going through firebase for the ChatIds that are associated with the logged in user. The chatIds are linked to the chat history and can be displayed for user to see. The unique key used to identify each user will the the firebase generated ID that is generated upon signing up for the website in the login screen
+
+| User Story                                                                 	| Block 	|
+|----------------------------------------------------------------------------	|-------	|
+| As a user I want to be able to easily locate files within a specific chat. 	| Chat  	|
+
 
 
 
