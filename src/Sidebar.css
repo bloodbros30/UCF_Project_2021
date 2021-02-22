@@ -13,6 +13,7 @@
 
   width: 100%;
   height: auto;
+  margin: 0%;
   padding: 0;
 
 
@@ -23,32 +24,53 @@
 
 
 .column .button{
-
+  width: 100%;
+  justify-content: center;
   font-family: "Comic Sans MS";
   border: 2px solid black;
-  padding: 0;
-  height: auto;
+  padding: 1;
+  height: 50px;
   list-style-type: none;
   display: flex;
+  margin: 0%;
   flex-direction: row;
-  color: red;
-  background-color: orange;
+  color: black;
+  font-size: 10pt;
+  background-color: #643685;
   align-content: center;
 
 }
 
 
+.button #img{
+
+  place-items: center;
+  flex: 40%;
+  display: grid;
+
+
+}
+
+
+.button #text{
+
+  flex: 60%;
+  place-items: center;
+  display: grid;
+
+
+}
 
 .column .button:hover{
 
 cursor: pointer;
-background-color: #CE8A3A;
+background-color: #3E2054;
 
 
 }
 
 .column #clicked {
 
-  background-color: #CE8A3A;
+  background-color: #3E2054;
 
 }
