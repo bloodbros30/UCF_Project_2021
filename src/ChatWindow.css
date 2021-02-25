@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/*
 html,
 body {
   height: 100%;
@@ -12,14 +13,16 @@ body {
 
 html {
 font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-background: linear-gradient(180deg, rgba(74,165,231,1) 5%, rgba(40,211,246,1) 21%, rgba(40,211,246,1) 37%, #353b48 37%);
+background: linear-gradient(90deg, rgba(47,53,66,1) 26%, rgba(164,176,190,1) 100%);
 }
 
 body {
   display: flex;
+  background-color: #e9e9e9;
   justify-content: center;
   align-items: center;
 }
+*/
 
 .ChatWindow {
     display: grid;
@@ -36,91 +39,59 @@ body {
     "convolist . . ."
     "convolist . . ."
     "msgcontainer text-form text-form text-form";
+    border-color: black;
     min-width: 1000px;
     max-width: 1400px;
     max-height: 800;
     width: 100%;
     height: 90vh;
-    background-color: #c8d6e5;
-
+    background: #dfe4ea;
     border-radius: 20px;
   }
   
 
   .conversation-list, .new-message-container, .search-bar {
-    border: .0005rem groove;
-    border-color: #718093;
-    background-color: #2e86de;
-    color: white;
-    border-left: none;
+    background-color: #70a1ff;
   }
 
   .chat-title,.text-form {
-    display: grid;
-
-    border: .0005rem groove;
-    border-color: #718093;
-    color: white;
-    background: #9c88ff;
-    border-left: none;
-    border-right: none;
+    
+    background: linear-gradient(90deg, rgba(255,99,72,1) 27%, rgba(255,127,80,1) 100%);
     
   }
 
   .text-form {
-    display: grid;
-    grid: 50px / 600px 1fr;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-
-    grid-gap: 40px;
     grid-area: text-form;
-
-    padding-left: 40px;
-
-    border-bottom: none;
-    
-  }
-  .text-input {
-    display: block; 
-    box-sizing: padding-box;
-    overflow: hidden;
-    resize: none;
-    background-color: #c8d6e5;
-
-    padding: 15px 20px 15px 15px;
-    line-height: 20px;
-    border: 0;
-    border-radius: 10px;
-    color: #330;
-    font-size: 1rem;
+    justify-content: center;
+    box-shadow: 1px 1px 3px -1px black;
+    border-radius: 0 0 10px 0;
   }
 
   .chat-title {
     grid-area: chat-title;
-    border-radius: 0 15px 0 0;
-    border-top: none;
+    border-radius: 0 10px 0 0;
+    box-shadow: 0 1px 3px -1px black;
   }
 
   .conversation-list {
-    color: white;
     grid-area: convolist;
-    border-top: none;
+    border-top: black;
+    box-shadow:  1px 1px -1px black;
+    z-index: 1;
   }
 
   .new-message-container {
     grid-area: msgcontainer;
-    border-radius: 0 0 0 10px;
-    border-bottom: none;
-    border-top: none;
+    z-index: 2;
+    /*border-radius: 0 0 0 10px;*/
   }
 
   .search-bar
   {
     grid-area: search;
-    border-radius: 10px 0 0 0;
-    border-top: none;
+    /*border-radius: 10px 0 0 0;*/
+    box-shadow: 0 1px 3px -1px black;
+    z-index: 1;
   }
   .chat-message-list {
     grid-area: msglist;
