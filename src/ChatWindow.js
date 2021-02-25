@@ -5,12 +5,32 @@ import firebase from 'firebase';
 import "firebase/auth";
 import {fs} from './fire.js';
 
+var user = firebase.auth().currentUser;
+
+
+
+
+
 async function sendMessage(){
 
+
+  var uName = "defaultName"
+  var iD = "defaultID"
+  if (user) {
+    /*
+    console.log("user found")
+    console.log(user.Username)
+    console.log()*/
+    var uName = user.uid
+    var iD = user.uid
+  } else {
+
+    console.log("no user found")
+  }
   var text = document.getElementById("messageField").value;
-  document.getElementById("b").innerHTML = text;
+  //document.getElementById("b").innerHTML = text;
   document.getElementById("messageField").value = ''
-  var iD = "aaabbbccc"
+
 
 
   var today = new Date();
@@ -19,7 +39,7 @@ async function sendMessage(){
 
   const data={
       Message: text,
-      Name: "TEST",
+      Name: uName,
       USERID: iD,
       time: curTime
 
@@ -27,6 +47,8 @@ async function sendMessage(){
 
 
     const res = await fs.collection('Chats').doc('Sports').collection('Message2').doc('test').set(data);
+    //will need to change message2 to be whatever message we are on probably better to just index with number
+
     //console.log(res); test for error messages if need be
 
 
@@ -66,10 +88,6 @@ function ChatWindow() {
         <button
         type="button"
         onClick={sendMessage}
-
-        //onclick="sendMessage()"
-
-
 
         >
         Send
