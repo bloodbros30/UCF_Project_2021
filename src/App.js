@@ -1,6 +1,7 @@
 import LoginPage from "./LoginPage.js";
 import React, { useContext } from "react";
 import UserProvider, { UserContext } from "./UserProvider";
+//import "./login.test.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +16,8 @@ export default function App() {
 
     <UserProvider>
     <Router>
-       
-  
+
+
       <Switch>
       <Route
             path={`/`}
@@ -26,18 +27,16 @@ export default function App() {
             path={`./Home`}
             component={LandingPage}
         />
-         
+
         </Switch>
 
       </Router>
       </UserProvider>
 
-    
-       
 
-   
+
+
+
 
   );
 }
-
-

@@ -18,3 +18,4 @@ export default fire;
 
 export const auth = firebase.auth();
 export const db = firebase.database();
+export const fs = firebase.firestore();
