@@ -1,13 +1,14 @@
 
 import React, {useState, useEffect} from "react";
 
-import { auth } from "./fire";
+import { auth, fs } from "./fire";
 
 export const UserContext = React.createContext()
 
 
 export default function UserProvider({children}) {
   const [user, setUser] = useState();
+  
   
   useEffect(() => {
 
@@ -17,15 +18,18 @@ export default function UserProvider({children}) {
             setUser(uD);
         }
 
-        auth.onAuthStateChanged((userDetails) => {
+        auth.onAuthStateChanged(async (userDetails) => {
             if (userDetails) {
-                const user = { uid: userDetails.uid };
+                const userRef = fs.collection('Users').doc(userDetails.uid);
+                const doc =  await userRef.get();
+                const user = { uid: userDetails.uid, ...doc.data() };
                 setUser(user);
+                console.log("auth changed");
                 // update local storage
                 localStorage.setItem("userDetails", user);
             }
         });
-  });
+  }, []);
 
   return (
     <UserContext.Provider value={user}>
