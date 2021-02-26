@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ChatOptions.css";
+import { useContext } from 'react';
+import { UserContext } from "./UserProvider";
 
-function ChatOptions() {
+import {fs} from "./fire";
+
+
+ function ChatOptions() {
+
+  const user = useContext(UserContext);
+
+  console.log(user);
   return (
+
+
     <div className="ChatOptions">
 
-      Options
-        
+    
+    {user.Name}
+
     </div>
+    
   );
 }
 
