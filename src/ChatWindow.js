@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import "firebase/auth";
 import {fs} from './fire.js';
 
-var user = firebase.auth().currentUser;
+
 
 
 
@@ -13,7 +13,8 @@ var user = firebase.auth().currentUser;
 
 async function sendMessage(){
 
-
+  var user = firebase.auth().currentUser;
+  //it would be preferable to have this called outside the message function
   var uName = "defaultName"
   var iD = "defaultID"
   if (user) {
@@ -73,6 +74,9 @@ function ChatWindow() {
       <div className = "chat-title">
         chat title
       </div>
+
+
+      <div className = "chat-history"> chat history goes here </div>
 
       <div className = "text-form" >
         <textarea class='text-input'
