@@ -76,7 +76,7 @@ function ChatWindow() {
       </div>
 
 
-      <div className = "chat-history"> chat history goes here </div>
+
 
       <div className = "text-form" >
         <textarea class='text-input'
