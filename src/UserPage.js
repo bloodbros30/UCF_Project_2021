@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
-import {fs} from "./fire";
-import LoginPage from './LoginPage.js';
 import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 
+
+import "./App.css";
+
+
 function UserPage() {
+
   const user = useContext(UserContext);
+
+ if (!user) return <></>;
+  
+  console.log("cum");
   console.log(user);
     return(
       <div className = "userCard">

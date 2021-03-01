@@ -1,0 +1,48 @@
+.Sidebar {
+  border-right: 1px solid #7f7fd5;
+  background-color: #7f7fd5;
+  flex: 0.1;
+}
+
+
+.column{
+  width: 100%;
+  height: auto;
+  margin: 0%;
+  padding: 0;
+}
+
+.column .button{
+  font-family: "Comic Sans MS";
+  border: 1px solid black;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  font-family: "Comic Sans MS";
+  border: 2px solid black;
+  padding: 1;
+  height: 50px;
+  list-style-type: none;
+  display: flex;
+  margin: 0%;
+  flex-direction: row;
+  color: black;
+  font-size: 10pt;
+  background-color: #643685;
+  align-content: center;
+}
+
+
+.column .button:hover{
+cursor: pointer;
+background-color: #3E2054;
+
+
+}
+
+.column #clicked {
+
+  background-color: #3E2054;
+
+}
