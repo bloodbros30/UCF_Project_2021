@@ -1,8 +1,5 @@
-1.) Sign in or sign up to the website.
 
-2.)Navigate your cursor to the sidebar menu.
-
-3.)Hover the mouse over each component.
-
-4.)If the buttons change shades then the front-end functionality is working.
-
+No.	Steps to Reproduce	                                           Expected Behaviour
+1.	Run npm start on app locally                           	       The Login screen should be displayed unless you're already signed in.
+2.  Enter login info if necessary                                  The main chat windows and sidebar will be displayed.
+3.  Hover your mouse over the sidebar.                             The button over which you are hovering will slightly darken in color. 

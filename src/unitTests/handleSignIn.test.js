@@ -1,7 +1,7 @@
 //this is the first unit test
 //import UserProvider, { UserContext } from "./UserProvider";
 import handleSignIn from "./LoginPage"
-function SuckMYDICK(){
+function testTheHandleSignIn(){
 
   test('tests the login', () => {
 
