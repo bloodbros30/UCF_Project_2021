@@ -1,4 +1,4 @@
-# UCF COP_4331 Project
+# UCF COP_4331 Project (ChatUnlimited)
 
 # Product Vision Statement
 
