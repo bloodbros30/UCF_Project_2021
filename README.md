@@ -35,6 +35,23 @@ group chat functionality and communities of people who just chat about similar t
 - Nelson Reina - Start Chat Search feature
 - Steve Montes - Start profile customization page
 
+# Sprint 4
+- [Source Code](/src)
+- [Unit Tests](/src/unitTests)
+- [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1upUzMZMtthAg0LUP5b4fbpAZldVFypU6L3LfWf_3Akc/edit?usp=sharing)
+- [Velocity chart](https://docs.google.com/spreadsheets/d/1jKwPLi_FV2iHeRY4Cpr7XaL948TdbM8p8v62qhJ1EL8/edit?usp=sharing)
+- [Trello](https://trello.com/b/qaRvqV9A/project-management)
+- [Architecture & Design Documents](/artifacts/architecture.md)
+- [DEMO](https://youtu.be/FGrOQT4gVEI)
+
+# Task Allocation
+- Alejandro Rubio - Start ChatWindow Component
+- Hunter Cheung - Continue working on Sidebar Component
+- Jerome Konieczka - Start ChatOptions Component
+- Nelson Reina - Start Chat Search feature
+- Steve Montes - Start profile customization page
+
 
 
 ### Team Members
