@@ -43,14 +43,14 @@ group chat functionality and communities of people who just chat about similar t
 - [Velocity chart](https://docs.google.com/spreadsheets/d/1jKwPLi_FV2iHeRY4Cpr7XaL948TdbM8p8v62qhJ1EL8/edit?usp=sharing)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
-- [DEMO](https://youtu.be/FGrOQT4gVEI)
+- [DEMO](https://youtu.be/QdMZDuTcL9g)
 
 # Task Allocation
-- Alejandro Rubio - Start ChatWindow Component
-- Hunter Cheung - Continue working on Sidebar Component
-- Jerome Konieczka - Start ChatOptions Component
-- Nelson Reina - Start Chat Search feature
-- Steve Montes - Start profile customization page
+- Alejandro Rubio - Continue ChatWindow Component
+- Hunter Cheung - Working on Profile Page
+- Jerome Konieczka - Working on ChatOptions Component
+- Nelson Reina - Working on Global User Context
+- Steve Montes - Working on  Chat Search feature
 
 
 
