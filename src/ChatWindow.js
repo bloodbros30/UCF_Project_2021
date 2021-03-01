@@ -33,25 +33,25 @@ async function sendMessage(){
   document.getElementById("messageField").value = ''
 
 
+  if(text != ""){
+    var today = new Date();
 
-  var today = new Date();
+    var curTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-  var curTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    const data={
+        Message: text,
+        Name: uName,
+        USERID: iD,
+        time: curTime
 
-  const data={
-      Message: text,
-      Name: uName,
-      USERID: iD,
-      time: curTime
-
-    };
+      };
 
 
-    const res = await fs.collection('Chats').doc('Sports').collection('Message2').doc('test').set(data);
-    //will need to change message2 to be whatever message we are on probably better to just index with number
+      const res = await fs.collection('Chats').doc('Sports').collection('Message2').doc('test').set(data);
+      //will need to change message2 to be whatever message we are on probably better to just index with number
 
-    //console.log(res); test for error messages if need be
-
+      //console.log(res); test for error messages if need be
+  }
 
 
 
@@ -71,7 +71,7 @@ function ChatWindow() {
       <div className = "conversation-list">
         convo list
       </div>
-      <div className = "chat-title">
+      <div className = "Sports">
         chat title
       </div>
 
@@ -79,7 +79,7 @@ function ChatWindow() {
 
 
       <div className = "text-form" >
-        <textarea class='text-input'
+        <textarea className='text-input'
         id="messageField"
         //value = "a"
         rows='2'
