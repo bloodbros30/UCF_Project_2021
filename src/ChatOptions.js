@@ -86,7 +86,12 @@ async function CreateNewChat(){
 
     </button>
 
-    {user.Name}
+
+    Name:{user.name}
+
+    
+    
+    List of Chats:{user.chats} 
 
     </div>
 
