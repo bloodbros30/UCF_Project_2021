@@ -1,8 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
-import { auth } from "./fire";
+import { auth, fs } from "./fire";
 import LandingPage from "./LandingPage.js";
 import "./LoginPage.css";
 import { UserContext } from "./UserProvider";
+
 
 const LoginPage = () => {
   const user = useContext(UserContext);
@@ -22,11 +23,13 @@ const LoginPage = () => {
     setPasswordError("");
   };
 
-  function handleSignIn() {
+function handleSignIn() {
     auth.signInWithEmailAndPassword(email, password);
+
+
   }
 
-  const handleSignup = () => {
+  async function handleSignup(){
     clearErrors();
     auth.createUserWithEmailAndPassword(email, password).catch((err) => {
       switch (err.code) {
@@ -38,7 +41,13 @@ const LoginPage = () => {
           setPasswordError(err.message);
           break;
       }
-    });
+    })
+
+    
+
+   
+
+    
   };
 
   const handleLogout = () => {

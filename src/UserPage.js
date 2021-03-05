@@ -12,7 +12,7 @@ function UserPage() {
 
  if (!user) return <></>;
   
-  console.log("cum");
+ 
   console.log(user);
     return(
       <div className = "userCard">
