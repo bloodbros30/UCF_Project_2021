@@ -13,6 +13,7 @@ async function logOut() {
 }
 
 function goToProfile() {
+
   window.location.pathname = "/Profile";
 
 }

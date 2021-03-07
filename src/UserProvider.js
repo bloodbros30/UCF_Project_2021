@@ -8,8 +8,8 @@ export const UserContext = React.createContext()
 
 export default function UserProvider({children}) {
   const [user, setUser] = useState();
-  
-  
+
+
   useEffect(() => {
 
         // check local storage to see if we already have user
@@ -32,9 +32,9 @@ export default function UserProvider({children}) {
                   name: 'Default Name',
                   chats: ['Welcome Chat',' Test Chat']
                 };
-             
+
                 const res = await fs.collection('Users').doc(user.uid).set(data);
-                
+
             }
         });
   }, []);

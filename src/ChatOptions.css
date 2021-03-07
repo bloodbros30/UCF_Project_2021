@@ -2,6 +2,85 @@
     border-right: 1px solid rgb(0, 0, 0);
     background: #eee;
     flex: 0.2;
-
+    overflow-y:scroll;
+    height: 600px;
 
   }
+
+
+.chatList{
+
+
+  list-style-type: none;
+  align-content: center;
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.chatList .name{
+
+    height: auto;
+    width: 100%;
+    font-family: "Comic Sans MS";
+
+
+}
+
+.chatList .chatItem{
+  font-family: "Comic Sans MS";
+  border: 1px solid black;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  font-family: "Comic Sans MS";
+  border: 2px solid black;
+  padding: 1;
+  height: 50px;
+  list-style-type: none;
+  display: flex;
+  margin: 0%;
+  flex-direction: row;
+  color: black;
+  font-size: 10pt;
+  background-color: #a324a1;
+  align-content: center;
+
+
+
+}
+
+
+.chatList .chatItem:hover{
+
+
+ cursor:pointer;
+ font-size: 15pt;
+
+}
+
+
+
+.chatList .chatItem #clicked{
+
+
+
+
+  font-size: 15pt;
+
+
+
+}
+
+
+
+
+.butt:hover{
+
+
+  cursor: cell;
+
+
+}
