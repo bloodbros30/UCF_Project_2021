@@ -94,6 +94,7 @@ function ChatWindow() {
         onClick={sendMessage}
 
         >
+
         Send
 
         </button>

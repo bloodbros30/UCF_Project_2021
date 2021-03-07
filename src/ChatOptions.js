@@ -4,6 +4,10 @@ import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 import {fs} from "./fire";
 
+
+
+
+
 async function CreateNewChat(){
 
 
@@ -62,7 +66,12 @@ async function CreateNewChat(){
     } else alert("Create new chat canceled!");
 
 
+    var list = document.getElementById('curList');
 
+    var newChat = document.createElement('li');
+    newChat.innerHTML = chatName;
+    newChat.classList.add("chatItem");
+    list.appendChild(newChat);
 
 
   }
@@ -70,23 +79,65 @@ async function CreateNewChat(){
 
  function ChatOptions() {
 
+var curChat = "";
+
+
+
   const user = useContext(UserContext);
 
+
+
   console.log(user);
+
+  console.log(user.chats);
+
+
+
+
+
+
+  //console.log(data);
+
   return (
 
 
-    <div className="ChatOptions">
+    <div className="ChatOptions" id="window">
 
 
-    <button  onClick={CreateNewChat}>
+      <button  onClick={CreateNewChat} className="butt">
 
-    New Chat
+        +New Chat
 
 
-    </button>
+      </button>
 
-    {user.Name}
+      <ul className="chatList" id="curList">
+
+      <li className="name">  Hello! {user.name} </li>
+
+
+      {user.chats.map((val, key) => {
+        return (
+          <li
+            key={key}
+            className="chatItem"
+            id={curChat == val ? "clicked" : " "}
+            onClick={() => {
+              curChat = val;
+              console.log(curChat);
+              console.log(curChat==val);
+              /*this is here as a placeholder so that in the future we may
+             connect it to chat components*/
+            }}
+          >
+            <div id="text">{val}</div>
+          </li>
+        );
+      })}
+
+
+
+      </ul>
 
     </div>
 
