@@ -61,6 +61,7 @@ group chat functionality and communities of people who just chat about similar t
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
 - [DEMO](https://youtu.be/QdMZDuTcL9g)
+- [Unit Test Screenshots](/src/unitTests/demoScreenshot.md)
 
 # Task Allocation
 - Alejandro Rubio - Continue ChatWindow Component
