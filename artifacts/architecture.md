@@ -38,7 +38,7 @@ The chat history is stored as a collection of strings under the subroot of the c
 
 # Code Design
 
-![alt text](https://cdn.discordapp.com/attachments/803334690009382935/818345828853743636/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/818389513146466304/classDiagramv2.PNG)
 
 These will be major classes needed for the user's page and chat. The user's page will give functionality where they can change their own profile picture and username as well as a list of their group chats. The chat class will record the messages sent, who sent them, and when they were sent. The design also shows the functionalitty the user is able to have such as the ability to create groupchats, direct messages, and join multiple chats. 
 | User Story                                                                                 	| Block 	|
