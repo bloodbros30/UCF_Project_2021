@@ -27,14 +27,6 @@ export default function UserProvider({children}) {
                 console.log("auth changed");
                 // update local storage
                 localStorage.setItem("userDetails", user);
-
-                const data = {
-                  name: 'Default Name',
-                  chats: ['Welcome Chat',' Test Chat']
-                };
-
-                const res = await fs.collection('Users').doc(user.uid).set(data);
-
             }
         });
   }, []);

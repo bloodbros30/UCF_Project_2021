@@ -4,7 +4,6 @@ import LandingPage from "./LandingPage.js";
 import "./LoginPage.css";
 import { UserContext } from "./UserProvider";
 
-
 const LoginPage = () => {
   const user = useContext(UserContext);
   const [email, setEmail] = useState("");
@@ -23,32 +22,33 @@ const LoginPage = () => {
     setPasswordError("");
   };
 
-function handleSignIn() {
+  function handleSignIn() {
     auth.signInWithEmailAndPassword(email, password);
-
-
   }
 
-  async function handleSignup(){
+  async function handleSignup() {
     clearErrors();
-    auth.createUserWithEmailAndPassword(email, password).catch((err) => {
-      switch (err.code) {
-        case "auth/email-already-in-use":
-        case "auth/invalid-email":
-          setEmailError(err.message);
-          break;
-        case "auth/weak-password":
-          setPasswordError(err.message);
-          break;
-      }
-    })
-
-    
-
-   
-
-    
-  };
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const uid = userCredential.user.uid;
+        fs.collection("users").doc(uid).set({
+          email,
+          chats: []
+        });
+      })
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  }
 
   const handleLogout = () => {
     auth.signOut();
