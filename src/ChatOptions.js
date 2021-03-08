@@ -116,24 +116,7 @@ var curChat = "";
       <li className="name">  Hello! {user.name} </li>
 
 
-      {user.chats.map((val, key) => {
-        return (
-          <li
-            key={key}
-            className="chatItem"
-            id={curChat == val ? "clicked" : " "}
-            onClick={() => {
-              curChat = val;
-              console.log(curChat);
-              console.log(curChat==val);
-              /*this is here as a placeholder so that in the future we may
-             connect it to chat components*/
-            }}
-          >
-            <div id="text">{val}</div>
-          </li>
-        );
-      })}
+      
 
 
 
