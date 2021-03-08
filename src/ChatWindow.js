@@ -1,9 +1,12 @@
 import React from "react";
+import { useRef, useState } from 'react';
 import { auth } from "./fire";
 import "./ChatWindow.css";
 import firebase from 'firebase';
 import "firebase/auth";
 import {fs} from './fire.js';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 
 async function sendMessage(){
@@ -58,6 +61,28 @@ async function sendMessage(){
 
 
 function ChatWindow() {
+  const dummy = useRef();
+  const messagesRef = fs.collection('messages');
+  const query = messagesRef.orderBy('createdAt').limit(25);
+  const [messages] = useCollectionData(query, {idField: 'id'});
+  const [formValue, setFormValue] = useState('');
+
+  const sendMessage = async (e) =>
+  {
+    e.preventDefault();
+
+    const user = firebase.auth().currentUser;
+    
+    await messagesRef.add({
+      messageText: formValue,
+      sentAt: firebase.firestore.FieldValue.serverTimestamp(),
+      //user,
+    })
+
+    setFormValue('');
+    dummy.current.scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
     <div className = "ChatWindow">
       <div className = "conversation-list">
@@ -66,29 +91,18 @@ function ChatWindow() {
       <div className = "chat-title">
         Sports
       </div>
-
-
-
-
       <div className = "text-form" >
         <textarea className = 'text-input'
         id = "messageField"
         //value = "a"
         rows = '2'
-        placeholder = 'Type a message...'
-
-
-        >
+        placeholder = 'Type a message...'>
         </textarea>
 
         <button
         type = "button"
-        onClick = {sendMessage}
-
-        >
-
-        Send
-
+        onClick = {sendMessage}>
+          Send
         </button>
 
       </div>
