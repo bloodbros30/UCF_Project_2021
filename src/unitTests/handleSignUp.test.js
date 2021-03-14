@@ -1,6 +1,6 @@
 //second unit test
 
-//import UserProvider, { UserContext } from "./UserProvider";
+import UserProvider, { UserContext } from "./UserProvider";
 import handleSignIn from "./LoginPage.js"
 test('tests the login', () => {
 
