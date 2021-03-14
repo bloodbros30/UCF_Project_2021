@@ -19,7 +19,7 @@ function ChatWindow() {
   const sendMessage = async (e) =>
   {
     e.preventDefault();
-    
+
     await messagesRef.add({
       messageText: formValue,
       sentAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -33,11 +33,12 @@ function ChatWindow() {
 
 
 
-  
+
   return (<>
     <main> {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}</main>
 
     <div className = "ChatWindow">
+    
       <div className = "conversation-list">
         conversation list
       </div>
@@ -56,7 +57,7 @@ function ChatWindow() {
           Send
         </button>
       </form>
-      
+
 
       <div className = "new-message-container" id = "b">
         new msg container
