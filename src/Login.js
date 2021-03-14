@@ -18,7 +18,28 @@ const Login = (props) => {
   function handleSignIn() {
     auth.signInWithEmailAndPassword(email, password);
   }
-
+  /*      This is used to sign in with google/gmail, it also lets us get the users profile pic and info 
+  function signIn(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider);
+  }
+  function signOut(){
+    firebase.auth.signOut();
+  }
+  function initFirebaseAuth(){ //initiate firebase auth which i know we have already
+    firebase.auth().onStateChanged(authStateObserver);
+  }
+ function getProfilePictureURL(){ //Returns the sign in users profile
+   return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+ }
+ function getUserName(){ //Returns users display name from google
+   return firebase.auth().currentUser.displayName;
+ }
+function isUserSignedIn(){
+  return !!firebase.auth().currentUser;
+}
+  }
+*/
   return (
     <section className="login">
       <div className="loginContainer">
