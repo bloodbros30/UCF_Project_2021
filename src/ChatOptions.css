@@ -1,7 +1,7 @@
 .ChatOptions {
     border-right: 1px solid rgb(0, 0, 0);
     background: #eee;
-    flex: 0.2;
+    flex: 0.1;
     overflow-y:scroll;
     height: 600px;
 

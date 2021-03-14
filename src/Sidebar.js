@@ -6,6 +6,19 @@ import { Redirect } from "react-router-dom";
 
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
+
+function sidebarButtonHandler(flag){
+
+
+  if(flag == 0) logOut();
+  else if(flag == 1) goToProfile();
+  else if(flag == 2) console.log("buttons working but no functions implemented yet");
+  else console.log("Something went horribly wrong");
+
+
+}
+
+
 async function logOut() {
   await auth.signOut();
   localStorage.clear();
@@ -29,9 +42,7 @@ function Sidebar() {
               className="button"
               id={window.location.pathname == val.link ? "clicked" : " "}
               onClick={() => {
-                // window.location.pathname = val.link;
-                /*this is here as a placeholder so that in the future we may
-               connect it to other components*/
+                sidebarButtonHandler(val.flag);
               }}
             >
               <div id="img">{val.image}</div> <div id="text">{val.name}</div>
@@ -39,17 +50,7 @@ function Sidebar() {
           );
         })}
       </ul>
-      <Link to="/">
-        <button type="button" onClick={logOut}>
-          LogOut!
-        </button>
-      </Link>
-
-      <Link to="/Profile">
-        <button type="button" onClick={goToProfile}>
-          Profile!
-        </button>
-        </Link>
+    
     </div>
   );
 }

@@ -7,11 +7,10 @@ test('tests the firestore user call', () => {
 
     <UserProvider>
     const value = testID();
-  
+
     expect(value).toBe(true);
 
     </UserProvider>
-  
-  
+
+
   });
-  
