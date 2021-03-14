@@ -11,14 +11,14 @@ body {
     grid-template-rows: repeat(10, 1fr) ;
     grid-template-areas:
     "search chat-title chat-title chat-title"
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
-    "convolist . . ."
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
+    "convolist msglist msglist msglist"
     "msgcontainer text-form text-form text-form";
     min-width: 1000px;
     max-width: 1400px;
@@ -29,7 +29,6 @@ body {
 
     border-radius: 20px;
   }
-
 
   .conversation-list, .new-message-container, .search-bar {
     border: .0005rem groove;

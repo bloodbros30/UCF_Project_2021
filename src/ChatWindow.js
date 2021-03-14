@@ -38,9 +38,8 @@ function ChatWindow() {
 
 
   return (<>
-    <main> {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}</main>
-
     <div className = "ChatWindow">
+
       <div className = "conversation-list">
         conversation list
       </div>
@@ -60,29 +59,20 @@ function ChatWindow() {
         </button>
       </form>
       
-
       <div className = "new-message-container" id = "b">
         new msg container
       </div>
+
       <div className = "search-bar">
         search bar
       </div>
+
       <div className = "chat-message-list">
+        chat - message - list
       </div>
+
     </div>
   </>);
   }
-
-function ChatMessage(misc) {
-  const { text, uid, photoURL } = misc.message;
-
-  const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
-
-  return (<>
-    <div className={`message ${messageClass}`}>
-      <p>{text}</p>
-    </div>
-  </>)
-}
 
 export default ChatWindow;

@@ -59,7 +59,6 @@ async function createNewChat(){
   newChat.classList.add("chatItem");
   list.appendChild(newChat);
 
-
   }
 
  function ChatOptions() {
