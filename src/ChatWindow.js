@@ -16,6 +16,9 @@ function ChatWindow() {
   const [formValue, setFormValue] = useState('');
   const user = firebase.auth().currentUser;
 
+  var btn = document.getElementById('sendBtn');
+  //btn.disabled = formValue == '';
+
   const sendMessage = async (e) =>
   {
     e.preventDefault();
@@ -33,12 +36,20 @@ function ChatWindow() {
 
 
 
+<<<<<<< HEAD
 
   return (<>
     <main> {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}</main>
+=======
+>>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
 
+  return (<>
     <div className = "ChatWindow">
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
       <div className = "conversation-list">
         conversation list
       </div>
@@ -53,34 +64,30 @@ function ChatWindow() {
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-        <button type="button" onClick={sendMessage}>
+        <button type="button" id = "sendBtn" onClick={sendMessage}>
           Send
         </button>
       </form>
+<<<<<<< HEAD
 
 
+=======
+      
+>>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
       <div className = "new-message-container" id = "b">
         new msg container
       </div>
+
       <div className = "search-bar">
         search bar
       </div>
+
       <div className = "chat-message-list">
+        chat - message - list
       </div>
+
     </div>
   </>);
   }
-
-function ChatMessage(misc) {
-  const { text, uid, photoURL } = misc.message;
-
-  const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
-
-  return (<>
-    <div className={`message ${messageClass}`}>
-      <p>{text}</p>
-    </div>
-  </>)
-}
 
 export default ChatWindow;
