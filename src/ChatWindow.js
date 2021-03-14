@@ -16,10 +16,13 @@ function ChatWindow() {
   const [formValue, setFormValue] = useState('');
   const user = firebase.auth().currentUser;
 
+  var btn = document.getElementById('sendBtn');
+  //btn.disabled = formValue == '';
+
   const sendMessage = async (e) =>
   {
     e.preventDefault();
-    
+
     await messagesRef.add({
       messageText: formValue,
       sentAt: firebase.firestore.FieldValue.serverTimestamp(),
@@ -33,7 +36,7 @@ function ChatWindow() {
 
 
 
-  
+
   return (<>
     <main> {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}</main>
 
@@ -52,7 +55,7 @@ function ChatWindow() {
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-        <button type="button" onClick={sendMessage}>
+        <button type="button" id = "sendBtn" onClick={sendMessage}>
           Send
         </button>
       </form>
