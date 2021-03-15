@@ -7,17 +7,124 @@ import "firebase/auth";
 import {fs} from './fire.js';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import RefreshIcon from '@material-ui/icons/Refresh';
+
+
+
+
+
+
+
 
 function ChatWindow() {
   //const dummy = useRef();
+
+
+
   const messagesRef = fs.collection('messages');
-  const query = messagesRef.orderBy('createdAt').limit(25);
-  const [messages] = useCollectionData(query, {idField: 'id'});
+  var collection;
+  var gotMessagesAlready = false;
+
+  //const query = collection.orderBy('sentAt').limit(25);
+  //const [messages] = useCollectionData(query, {idField: 'id'});
   const [formValue, setFormValue] = useState('');
   const user = firebase.auth().currentUser;
-
+ var used = false;
   var btn = document.getElementById('sendBtn');
+
   //btn.disabled = formValue == '';
+ //console.log(messages[0]); //this is broken
+
+
+
+ if(!user) return <></>;
+ var curUserId = user.id;
+console.log(messagesRef);
+//setInterval(fillMessages(), 5000);
+
+console.log("HERE IS COLLECTION");
+
+
+
+
+//fillMessages();
+
+
+/*function populateMessage(collection){
+  collection.forEach(doc => {
+    console.log(doc.id, '=>', doc.data());
+  });
+
+}*/
+
+
+
+
+  async function fillMessages(){
+
+
+
+    if(!gotMessagesAlready){
+      //do all the shit here
+
+      //get the message from database
+      collection = await messagesRef.orderBy('sentAt').limit(25).get();
+      if(collection.empty){
+
+        console.log("information not obtained successfully");
+      } else{
+
+        var localuid = await user.id;
+
+        var list = document.getElementById('chatLog');
+        list.innerHTML = '';
+        collection.forEach(doc => {
+          console.log(doc.id, '=>', doc.data());
+
+
+
+
+              var aMessage = document.createElement('li');
+              aMessage.innerHTML = doc.data().messageText
+
+                console.log("got inside first if");
+                if(localuid == doc.data().userID){
+
+                    aMessage.classList.add("chatMessageME");
+                    console.log(curUserId);
+
+                }
+                else{
+                  console.log(curUserId);
+                  console.log("failed");
+                  aMessage.classList.add("chatMessageOther");
+                }
+
+
+              list.appendChild(aMessage);
+
+        });
+
+        //returnFunc(collection);
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+
+    }
+
+    gotMessagesAlready = true;
+
+  }
 
   const sendMessage = async (e) =>
   {
@@ -31,25 +138,25 @@ function ChatWindow() {
     })
 
     setFormValue('');
+    fillMessages();
     //dummy.current.scrollIntoView({behavior: 'smooth'});
   }
 
 
 
-<<<<<<< HEAD
+
+
+
 
   return (<>
-    <main> {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}</main>
-=======
->>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
 
-  return (<>
+
+
+
+
+
     <div className = "ChatWindow">
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
       <div className = "conversation-list">
         conversation list
       </div>
@@ -64,16 +171,29 @@ function ChatWindow() {
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-        <button type="button" id = "sendBtn" onClick={sendMessage}>
+        <button type="button" className = "refresh"
+
+        onClick={() => {
+        fillMessages();
+
+      }}
+
+        >
+            <RefreshIcon/>
+        </button>
+        <button type="button" id = "sendBtn"
+
+        onClick={sendMessage}
+
+
+        >
           Send
         </button>
+
+
+
       </form>
-<<<<<<< HEAD
 
-
-=======
-      
->>>>>>> fd8b525086c0dd2c44ac0aa5ab1efbd87dbd63ff
       <div className = "new-message-container" id = "b">
         new msg container
       </div>
@@ -83,7 +203,18 @@ function ChatWindow() {
       </div>
 
       <div className = "chat-message-list">
-        chat - message - list
+
+        <ul className = "chatHistory" id = "chatLog">
+
+
+
+
+
+
+        </ul>
+
+
+
       </div>
 
     </div>
