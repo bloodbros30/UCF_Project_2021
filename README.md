@@ -78,7 +78,7 @@ group chat functionality and communities of people who just chat about similar t
 - [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit#gid=0)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
-- [DEMO](https://youtu.be/QdMZDuTcL9g)
+- [DEMO](https://www.youtube.com/watch?v=ck3gXT8IJWQ)
 - [Unit Test Screenshots](/src/unitTests/demoScreenshot.md)
 
 # Task Allocation
