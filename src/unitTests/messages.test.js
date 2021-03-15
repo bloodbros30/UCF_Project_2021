@@ -39,9 +39,3 @@ describe('Sending Messages', () => {
     expect(mockGet).toHaveBeenCalled();
   });
 });
-
-test('Message can be sent to database', async () =>{
-
-
-
-})

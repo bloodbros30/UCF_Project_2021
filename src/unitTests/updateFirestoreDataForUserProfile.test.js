@@ -44,4 +44,4 @@ test('tests the upload of user info to the user profile', () => {
   expect(mockGet).toHaveBeenCalled();
 
 
-  });
+});

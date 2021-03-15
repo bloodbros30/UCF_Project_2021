@@ -19,11 +19,6 @@ import RefreshIcon from '@material-ui/icons/Refresh';
 function ChatWindow() {
   //const dummy = useRef();
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d34c14cbf88635afef9d4cd71fa41d837de2956f
   const messagesRef = fs.collection('messages');
   var collection;
   var gotMessagesAlready = false;
@@ -146,14 +141,11 @@ console.log("HERE IS COLLECTION");
   }
 
 
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> d34c14cbf88635afef9d4cd71fa41d837de2956f
   return (<>
 
 
@@ -173,7 +165,6 @@ console.log("HERE IS COLLECTION");
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-<<<<<<< HEAD
 
         <button type="button" id = "sendBtn"
 
@@ -182,16 +173,11 @@ console.log("HERE IS COLLECTION");
 
         >
           Send
-=======
-        <button className= "send-btn" type="button" id = "sendBtn" onClick={sendMessage}>
-          Send Message
->>>>>>> d34c14cbf88635afef9d4cd71fa41d837de2956f
         </button>
 
 
 
       </form>
-<<<<<<< HEAD
 
       <div className = "new-message-container" id = "b">
         new msg container
@@ -200,9 +186,6 @@ console.log("HERE IS COLLECTION");
       <div className = "search-bar">
         search bar
       </div>
-=======
-      
->>>>>>> d34c14cbf88635afef9d4cd71fa41d837de2956f
 
       <div className = "chat-message-list">
 
