@@ -63,7 +63,7 @@ console.log("HERE IS COLLECTION");
   async function fillMessages(){
 
 
-
+    console.log(user);
     if(!gotMessagesAlready){
       //do all the shit here
 
@@ -74,7 +74,7 @@ console.log("HERE IS COLLECTION");
         console.log("information not obtained successfully");
       } else{
 
-        var localuid = await user.id;
+        var localuid = user.L;
 
         var list = document.getElementById('chatLog');
         list.innerHTML = '';
@@ -171,16 +171,7 @@ console.log("HERE IS COLLECTION");
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-        <button type="button" className = "refresh"
 
-        onClick={() => {
-        fillMessages();
-
-      }}
-
-        >
-            <RefreshIcon/>
-        </button>
         <button type="button" id = "sendBtn"
 
         onClick={sendMessage}
