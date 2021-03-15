@@ -69,6 +69,25 @@ group chat functionality and communities of people who just chat about similar t
 - Jerome Konieczka - Working on ChatOptions Component
 - Nelson Reina - Working on Global User Context
 - Steve Montes - Working on  Chat Search feature
+- 
+# Sprint 6
+- [Source Code](/src)
+- [Unit Tests](/src/unitTests)
+- [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1MWNkCmtCtQpao57CAQxD93kSfH9QAHncaTseCCbnNkE/edit#gid=0)
+- [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit?usp=sharing)
+- [Trello](https://trello.com/b/qaRvqV9A/project-management)
+- [Architecture & Design Documents](/artifacts/architecture.md)
+- [DEMO](https://youtu.be/QdMZDuTcL9g)
+- [Unit Test Screenshots](/src/unitTests/demoScreenshot.md)
+
+# Task Allocation
+- Alejandro Rubio - Continue ChatWindow Component
+- Hunter Cheung - Working on Profile Page
+- Jerome Konieczka - Working on ChatOptions Component
+- Nelson Reina - Working on Global User Context
+- Steve Montes - Working on  Chat Search feature
+
 
 
 

@@ -58,10 +58,9 @@ async function createNewChat(){
   newChat.innerHTML = chatName;
   newChat.classList.add("chatItem");
   list.appendChild(newChat);
-
   }
 
- function ChatOptions() {
+function ChatOptions() {
 
   var curChat = "";
 
