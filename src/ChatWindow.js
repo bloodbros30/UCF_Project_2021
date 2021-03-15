@@ -10,6 +10,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 function ChatWindow() {
   //const dummy = useRef();
+
   const messagesRef = fs.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
   const [messages] = useCollectionData(query, {idField: 'id'});
@@ -35,14 +36,8 @@ function ChatWindow() {
   }
 
 
-
-
   return (<>
     <div className = "ChatWindow">
-
-      <div className = "conversation-list">
-        conversation list
-      </div>
 
       <div className = "chat-title">
         Sports
@@ -54,18 +49,11 @@ function ChatWindow() {
           rows='2'
           placeholder='Type a message...'>
         </textarea>
-        <button type="button" id = "sendBtn" onClick={sendMessage}>
-          Send
+        <button className= "send-btn" type="button" id = "sendBtn" onClick={sendMessage}>
+          Send Message
         </button>
       </form>
       
-      <div className = "new-message-container" id = "b">
-        new msg container
-      </div>
-
-      <div className = "search-bar">
-        search bar
-      </div>
 
       <div className = "chat-message-list">
         chat - message - list
