@@ -73,13 +73,28 @@ async function createNewChat(){
 
   return (
     <div className="ChatOptions" id="window">
-      <button  onClick={createNewChat} className="butt">
-        +New Chat
+      <button  onClick={createNewChat} className="create">
+        Create New Chat 
       </button>
 
       <ul className="chatList" id="curList">
-
-      <li className="name">  Hello! {user.name} </li>
+      {user.chats &&
+          user.chats.map((val, key) => (
+            <li
+              key={key}
+              className="chatItem"
+              id={curChat == val ? "clicked" : " "}
+              onClick={() => {
+                curChat = val;
+                console.log(curChat);
+                console.log(curChat == val);
+                /*this is here as a placeholder so that in the future we may
+               connect it to chat components*/
+              }}
+            >
+              <div id="text">{val}</div>
+            </li>
+          ))}
       </ul>
 
     </div>

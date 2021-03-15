@@ -2,93 +2,90 @@ import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 import { auth, fs } from "./fire";
 
+import {
+  Badge,
+  Button,
+  Card,
+  Form,
+  Navbar,
+  Nav,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+
 import "./App.css";
 
 
 function UserPage() {
 
   const user = useContext(UserContext);
-
- if (!user) return <></>;
-
-
   console.log(user);
-    return(
-      <div className = "userCard">
-        <div className = "UserImg">
 
-        </div>
+  function SubmitForm(e) {
+      console.log(123)
+      var name = getInputVal('name');
+      var username = getInputVal('username');
+      var age = getInputVal('age');
+      var address = getInputVal('address');
+      var interests = getInputVal('interests');
+      saveInfo(user, name, username, age, address, interests);
+    }
 
-        <div className = "usercardInfo">
-          <p >
-          <strong>Name:</strong> {user.name}
-          </p>
-
-        </div>
-
-        <div className = 'row mt'>
-          <div className = 'col s12 m6 l6 x l6'>
-
-              <strong>Name:</strong> {user.name}
-              <form>
-                <label>
-                  Name:
-                  <input type="text" name="name" />
-                  </label>
-                  <input type="submit" value="Submit" onChange={(e) => fs.collection('Users').doc(user.uid).update({
-                    "name" : e.target.value
-                  })} />
-              </form>
-
-
-              <strong>Age:</strong> {user.age}
-              <form>
-                <label>
-                  Age:
-                  <input type="text" age="age" />
-                  </label>
-                  <input type="submit" value="Submit" onChange={(e) => fs.collection('Users').doc(user.uid).update({
-                    "age" : e.target.value
-                  })} />
-              </form>
-
-              <strong>Interests:</strong> {user.interests}
-              <form>
-                <label>
-                  Age:
-                  <input type="text" age="age" />
-                  </label>
-                  <input type="submit" value="Submit" onChange={(e) => fs.collection('Users').doc(user.uid).update({
-                    "interests" : e.target.value
-                  })} />
-              </form>
-
-              <strong>Address:</strong> {user.address}
-              <form>
-                <label>
-                  Address:
-                  <input type="text" address="address" />
-                  </label>
-                  <input type="submit" value="Submit" onChange={(e) => fs.collection('Users').doc(user.uid).update({
-                    "address" : e.target.value
-                  })} />
-              </form>
-
-              <strong>Username:</strong> {user.username}
-              <form>
-                <label>
-                  Username:
-                  <input type="text" username="username" />
-                  </label>
-                  <input type="submit" value="Submit" onChange={(e) => fs.collection('Users').doc(user.uid).update({
-                    "username" : e.target.value
-                  })} />
-              </form>
-
-          </div>
-        </div>
-      </div>
-
-    );
+function getInputVal(id){
+  if(document.getElementById(id))
+  return document.getElementById(id).value;
 }
-export default UserPage;
+function saveInfo(user, name, username, age, address, interests){
+  console.log(user.uid);
+  fs.collection('Users').doc(user.uid).update({
+    name: name,
+    username: username,
+    age: age,
+    address: address,
+    interests: interests
+  })
+}
+  return(
+  <body>
+      <div className="container">
+        <div className="wrapper">
+          <div className="company-info">
+            <h3>Edit Profile</h3>
+          </div>
+          <div className="contact">
+                      <form id='userForm'>
+                      <p>
+                        <label>Name</label>
+                        <input type="text" name="name" id='name'></input>
+                      </p>
+                      <p>
+                        <label>Username</label>
+                        <input type="text" name="username" id='username'></input>
+                      </p>
+                      <p>
+                        <label>Address</label>
+                        <input type="text" name="address" id='address'></input>
+                      </p>
+                      <p>
+                        <label>Age</label>
+                        <input type="text" name="age" id='age'></input>
+                      </p>
+                      <p class="full">
+                        <label>Interests</label>
+                        <input type ="text" name="message" id='interests'></input>
+                      </p>
+                        <p class="full">
+                        <button type="submit"
+                        onClick = {SubmitForm}
+                        >Submit</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+  </body>
+);
+
+}
+export default UserPage
