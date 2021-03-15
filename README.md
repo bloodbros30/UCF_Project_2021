@@ -74,8 +74,8 @@ group chat functionality and communities of people who just chat about similar t
 - [Source Code](/src)
 - [Unit Tests](/src/unitTests)
 - [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
-- [Burndown chart](https://docs.google.com/spreadsheets/d/1MWNkCmtCtQpao57CAQxD93kSfH9QAHncaTseCCbnNkE/edit#gid=0)
-- [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit?usp=sharing)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1CqLzpgV4gn4rGHXS0HKF8N7cvMqDc186nMOeezwOcps/edit?usp=sharing)
+- [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit#gid=0)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
 - [DEMO](https://youtu.be/QdMZDuTcL9g)
@@ -86,7 +86,7 @@ group chat functionality and communities of people who just chat about similar t
 - Hunter Cheung - Working on Profile Page
 - Jerome Konieczka - Working on ChatOptions Component
 - Nelson Reina - Working on Global User Context
-- Steve Montes - Working on  Chat Search feature
+- Steve Montes - Working on ChatWindow feature
 
 
 
