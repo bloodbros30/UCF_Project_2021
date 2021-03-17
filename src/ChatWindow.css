@@ -74,7 +74,7 @@ body {
 
     font-family: "Comic Sans MS";
     border: 2px solid black;
-    padding: 1;
+    padding: 20px;
     height: 50px;
     list-style-type: none;
     display: flex;
@@ -101,7 +101,7 @@ body {
 
     font-family: "Comic Sans MS";
     border: 2px solid black;
-    padding: 1;
+    padding: 20px;
     height: 50px;
     list-style-type: none;
     display: flex;
@@ -109,9 +109,8 @@ body {
     flex-direction: row;
     color: black;
     font-size: 10pt;
-    background-color: blue;
+    background-color: lightblue;
     justify-content:flex-end;
-
 
   }
 

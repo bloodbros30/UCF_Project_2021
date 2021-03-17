@@ -61,15 +61,12 @@ async function createNewChat(){
   list.appendChild(newChat);
   }
 
-function ChatOptions() {
+function ChatOptions({ selectedChat, setSelectedChat }) {
 
   var curChat = "";
 
   const user = useContext(UserContext);
 
-  console.log(user);
-  console.log(user.chats);
-  //console.log(data);
 
   return (
     <div className="ChatOptions" id="window">
@@ -83,13 +80,9 @@ function ChatOptions() {
             <li
               key={key}
               className="chatItem"
-              id={curChat == val ? "clicked" : " "}
+              id={selectedChat == val ? "clicked" : " "}
               onClick={() => {
-                curChat = val;
-                console.log(curChat);
-                console.log(curChat == val);
-                /*this is here as a placeholder so that in the future we may
-               connect it to chat components*/
+                setSelectedChat(val);
               }}
             >
               <div id="text">{val}</div>
