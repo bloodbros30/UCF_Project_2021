@@ -12,7 +12,8 @@ function sidebarButtonHandler(flag){
 
   if(flag == 0) logOut();
   else if(flag == 1) goToProfile();
-  else if(flag == 2) console.log("buttons working but no functions implemented yet");
+  else if(flag == 2) goToChatPage();
+  else if(flag == 3) console.log("buttons working but no functions implemented yet");
   else console.log("Something went horribly wrong");
 
 
@@ -28,6 +29,11 @@ async function logOut() {
 function goToProfile() {
 
   window.location.pathname = "/Profile";
+
+}
+function goToChatPage() {
+
+  window.location.pathname = "/Chats";
 
 }
 

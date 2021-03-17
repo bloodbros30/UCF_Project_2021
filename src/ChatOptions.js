@@ -46,7 +46,8 @@ async function createNewChat(){
 
     separatedTags[tagNumber] = curWord;
 
-    const data = {Tags: separatedTags}
+    const data = {Tags: separatedTags,
+    Name: chatName}
 
     const res = await fs.collection('Chats').doc(chatName).set(data);
     }else alert("Create new chat canceled!");
