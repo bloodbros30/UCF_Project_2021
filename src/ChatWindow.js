@@ -134,7 +134,7 @@ function ChatWindow({ selectedChat }) {
   return (
     <>
       <div className="ChatWindow">
-        <div className="chat-title">Sports</div>
+        <div className="chat-title">{selectedChat}</div>
 
         <form className="text-form">
           <textarea
@@ -155,7 +155,7 @@ function ChatWindow({ selectedChat }) {
         </form>
 
         <div className="new-message-container" id="b">
-          new msg container
+          Chat Selected: {selectedChat}
         </div>
 
         <div className="search-bar">search bar</div>

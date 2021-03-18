@@ -35,7 +35,7 @@ function handleSignIn() {
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         const uid = userCredential.user.uid;
-        fs.collection("users").doc(uid).set({
+        fs.collection("Users").doc(uid).set({
           email,
           chats: []
         });
