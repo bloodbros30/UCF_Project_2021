@@ -28,6 +28,7 @@ body {
     background-color: rgb(197, 194, 194);
 
     border-radius: 20px;
+
   }
 
   .new-message-container {
@@ -53,8 +54,8 @@ body {
 
 
   .chatHistory{
-
-
+    flex-direction: row;
+    justify-content: flex-end;
 
 
 
@@ -66,6 +67,8 @@ body {
   .chatMessageMe{
 
 
+
+    float:right;
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 0;
@@ -73,18 +76,31 @@ body {
     width: 50%;
 
     font-family: "Comic Sans MS";
-    border: 2px solid black;
-    padding: 20px;
-    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+
+
+
     list-style-type: none;
-    display: flex;
-    margin: 0%;
+
+    display:flex;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 1%;
     flex-direction: row;
     color: black;
     font-size: 10pt;
-    background-color: #a324a1;
-    justify-content:flex-end;
+    background-color:  #3d99fc;
+    justify-content:flex-start;
+    white-space:nowrap;
 
+
+    height:fit-content;
+
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 
   }
 
@@ -100,17 +116,30 @@ body {
     width: 50%;
 
     font-family: "Comic Sans MS";
-    border: 2px solid black;
-    padding: 20px;
-    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+
+
+
     list-style-type: none;
     display: flex;
-    margin: 0%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 1%;
     flex-direction: row;
     color: black;
     font-size: 10pt;
-    background-color: lightblue;
-    justify-content:flex-end;
+    background-color: gray;
+    justify-content:flex-start;
+
+
+    width:fit-content;
+    height:fit-content;
+
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
 
   }
 
