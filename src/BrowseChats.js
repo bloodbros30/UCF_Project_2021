@@ -36,8 +36,7 @@ import './userList.css'
         {chats && 
             chats.map((chat) => (
                 <ChatItem 
-                name = {chat.Name}
-                tags = {chat.Tags}
+                chat= {chat}
                 user = {user}
               />
             ))}

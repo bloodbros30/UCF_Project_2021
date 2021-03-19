@@ -6,6 +6,7 @@ import { auth, fs } from "./fire";
 export const UserContext = React.createContext()
 
 
+
 export default function UserProvider({children}) {
   const [user, setUser] = useState();
 
@@ -25,7 +26,11 @@ export default function UserProvider({children}) {
                 const user = { uid: userDetails.uid, ...doc.data() };
                 setUser(user);
                 console.log("auth changed");
+                // update local storage
                 localStorage.setItem("userDetails", user);
+
+                
+
             }
         });
   }, []);

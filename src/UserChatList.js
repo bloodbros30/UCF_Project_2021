@@ -19,14 +19,14 @@ function UserChatList()
         </h1>
 
         {user && user.chats &&
-            user.chats.map((val, key) => (
+            user.chats.map((chat, key) => (
               <li
                 key={key}
                 className="chatItem"
                 onClick={() => {
                 }}
               >
-                <div id="text">{val}</div>
+                <div id="text">{chat.Name}</div>
               </li>
             ))}
 
