@@ -17,31 +17,32 @@ import './userList.css'
           setChats(snapshot.docs.map((doc) => doc.data()))
         );
     }, []);
-    
+
 
     var curChat = "";
 
     const user = useContext(UserContext);
 
-  
-  
-  
+
+
+
     return (
       <div className="ChatOptions" id="window">
-          
-  
+
+
         <ul className="chatList" id="curList">
 
-        
-        {chats && 
+
+        {chats &&
             chats.map((chat) => (
-                <ChatItem 
+                <ChatItem
                 chat= {chat}
                 user = {user}
               />
             ))}
+            
         </ul>
-  
+
       </div>
     );
 

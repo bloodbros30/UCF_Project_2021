@@ -8,6 +8,8 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
 import { fs } from "./fire";
 import firebase from "firebase";
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 function ChatItem({ chat, user }) {
   function test() {
@@ -18,13 +20,21 @@ function ChatItem({ chat, user }) {
   }
 
   return (
-    <div className="post">
-      {chat.Name}
 
-      <button className="button" onClick={test}>
-        Add Chat
-      </button>
-    </div>
+
+
+    <Card bg="danger" border="dark" style={{ width: '18rem' }}>
+    <Card.Header>{chat.Name}</Card.Header>
+    <Card.Body>
+      <Card.Title>Members: mem num go here</Card.Title>
+      <Card.Text>
+        could add additional chat description here
+      </Card.Text>
+
+      <Button  variant="dark"  onClick={test}>Add Chat</Button>
+
+    </Card.Body>
+  </Card>
   );
 }
 

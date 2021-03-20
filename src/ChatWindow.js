@@ -44,6 +44,20 @@ function ChatWindow({ selectedChat }) {
     setFormValue("");
   }
 
+  function createDate(secs ){
+
+
+    var time =  new Date(1970, 0, 1);
+    time.setSeconds(secs);
+    return time.toString();
+
+
+
+
+  }
+
+
+
   /*
 
   const messagesRef = fs.collection("messages");
@@ -166,12 +180,29 @@ function ChatWindow({ selectedChat }) {
               <li
                 key={message.id}
                 className={
+
                   user.uid === message.userID
                     ? "chatMessageMe"
                     : "chatMessageOther"
                 }
               >
+              <p>
                 {message.messageText}
+                <br/>
+                <div className= "time">
+                  Sent at {createDate(message.sentAt.seconds)}
+                </div>
+
+                <br/>
+
+                <div>
+
+                  -by: {message.userID}
+
+
+                </div>
+
+              </p>
               </li>
             ))}
           </ul>
