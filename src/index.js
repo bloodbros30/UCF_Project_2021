@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from './Cards/Cards'
 
+//UNCOMMENT THE Card to display 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App />,
+    {/*<Card */}
   </React.StrictMode>,
   document.getElementById('root')
 );
