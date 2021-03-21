@@ -1,21 +1,7 @@
 import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 import { auth, fs } from "./fire";
-
-import {
-  Badge,
-  Button,
-  Card,
-  Form,
-  Navbar,
-  Nav,
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
-
-import "./App.css";
-
+import "./UserPage.css";
 
 function UserPage() {
 
@@ -51,29 +37,24 @@ function saveInfo(user, name, username, age, address, interests){
       <div className="container">
         <div className="wrapper">
           <div className="company-info">
-            <h3>Edit Profile</h3>
           </div>
-          <div className="contact">
+          <div className="formStyle">
+            <h2>Edit Profile</h2>
                       <form id='userForm'>
                       <p>
-                        <label>Name</label>
-                        <input type="text" name="name" id='name'></input>
+                        <input type="text" name="name" id='name' placeholder="Name"></input>
                       </p>
                       <p>
-                        <label>Username</label>
-                        <input type="text" name="username" id='username'></input>
+                        <input type="text" name="username" id='username' placeholder="Username"></input>
                       </p>
                       <p>
-                        <label>Address</label>
-                        <input type="text" name="address" id='address'></input>
+                        <input type="text" name="address" id='address' placeholder="Address"></input>
                       </p>
                       <p>
-                        <label>Age</label>
-                        <input type="text" name="age" id='age'></input>
+                        <input type="text" name="age" id='age' placeholder="Age"></input>
                       </p>
                       <p class="full">
-                        <label>Interests</label>
-                        <input type ="text" name="message" id='interests'></input>
+                        <input type ="text" name="message" id='interests' placeholder="Interests"></input>
                       </p>
                         <p class="full">
                         <button type="submit"
