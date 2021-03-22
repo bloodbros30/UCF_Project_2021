@@ -11,7 +11,7 @@ import RefreshIcon from "@material-ui/icons/Refresh";
 import { UserContext } from "./UserProvider";
 
 function ChatWindow({ selectedChat }) {
-  //const dummy = useRef();
+  const dummy = useRef();
   const user = useContext(UserContext);
   const [formValue, setFormValue] = useState("");
   const unsub = fs.collection("Chats").doc(selectedChat).collection("messages");
@@ -28,6 +28,7 @@ function ChatWindow({ selectedChat }) {
       userID: user.uid,
     });
     setFormValue("");
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   function createDate(secs ){
@@ -61,16 +62,10 @@ function ChatWindow({ selectedChat }) {
           </button>
         </form>
 
-        <div className="new-message-container" id="b">
-          Chat Selected: {selectedChat}
-        </div>
-
         <div className="chat-message-list">
           <ul className="chatHistory" id="chatLog">
             {messages && messages.map((message) => (
-              <li
-                key={message.id}
-                className={
+              <li key={message.id} className={
 
                   user.uid === message.userID
                     ? "chatMessageMe"
@@ -95,6 +90,7 @@ function ChatWindow({ selectedChat }) {
               </p>
               </li>
             ))}
+            <span ref={dummy}></span>
           </ul>
         </div>
       </div>
