@@ -11,11 +11,11 @@ import firebase from "firebase";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-function ChatItem({ chat, user }) {
+function ChatItem({ chat, user,chatID }) {
   function test() {
     var ref = fs.collection("Users").doc(user.uid);
     ref.update({
-      chats: firebase.firestore.FieldValue.arrayUnion(chat),
+      chats: firebase.firestore.FieldValue.arrayUnion(chatID),
     });
   }
 
