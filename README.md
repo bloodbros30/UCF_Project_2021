@@ -88,6 +88,24 @@ group chat functionality and communities of people who just chat about similar t
 - Nelson Reina - Working on Global User Context
 - Steve Montes - Working on ChatWindow feature
 
+# Sprint 7
+- [Source Code](/src)
+- [Unit Tests](/src/unitTests)
+- [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1CqLzpgV4gn4rGHXS0HKF8N7cvMqDc186nMOeezwOcps/edit?usp=sharing)
+- [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit#gid=0)
+- [Trello](https://trello.com/b/qaRvqV9A/project-management)
+- [Architecture & Design Documents](/artifacts/architecture.md)
+- [DEMO](https://www.youtube.com/watch?v=ck3gXT8IJWQ)
+- [Unit Test Screenshots](/src/unitTests/demoScreenshot.md)
+
+# Task Allocation
+- Alejandro Rubio - Connected ChatOptions to ChatWindow
+- Hunter Cheung - Working on Profile Page
+- Jerome Konieczka - Working on Card Component
+- Nelson Reina - Working on Chat Page
+- Steve Montes - Working on ChatWindow component
+
 
 
 
