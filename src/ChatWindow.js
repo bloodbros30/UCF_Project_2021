@@ -14,9 +14,10 @@ function ChatWindow({ selectedChat }) {
   //const dummy = useRef();
   const user = useContext(UserContext);
   const [formValue, setFormValue] = useState("");
-  const [messages, setMessages] = useState([]);
   const unsub = fs.collection("Chats").doc(selectedChat).collection("messages");
+  const query = unsub.orderBy("sentAt").limit(50);
 
+  const [messages] = useCollectionData(query);
 
   async function sendMessage(e) {
     e.preventDefault();
@@ -64,11 +65,9 @@ function ChatWindow({ selectedChat }) {
           Chat Selected: {selectedChat}
         </div>
 
-        <div className="search-bar">search bar</div>
-
         <div className="chat-message-list">
           <ul className="chatHistory" id="chatLog">
-            {messages.map((message) => (
+            {messages && messages.map((message) => (
               <li
                 key={message.id}
                 className={
@@ -82,7 +81,7 @@ function ChatWindow({ selectedChat }) {
                 {message.messageText}
                 <br/>
                 <div className= "time">
-                  Sent at {createDate(message.sentAt.seconds)}
+                  Sent at {message.sentAt && createDate(message.sentAt.seconds)}
                 </div>
 
                 <br/>
@@ -90,7 +89,6 @@ function ChatWindow({ selectedChat }) {
                 <div>
 
                   -by: {message.userID}
-
 
                 </div>
 
