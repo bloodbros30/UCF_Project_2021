@@ -92,7 +92,7 @@ group chat functionality and communities of people who just chat about similar t
 - [Source Code](/src)
 - [Unit Tests](/src/unitTests)
 - [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
-- [Burndown chart](https://docs.google.com/spreadsheets/d/1CqLzpgV4gn4rGHXS0HKF8N7cvMqDc186nMOeezwOcps/edit?usp=sharing)
+- [Burndown chart](https://docs.google.com/spreadsheets/d/1GKb3JNM5ToXbW3CUn4OlQRvRZEDlkzqRiJJoA5xnkCk/edit?usp=sharing)
 - [Velocity chart](https://docs.google.com/spreadsheets/d/15zyJoECvKrc9pT0Xe2e4iJjeQulPTzM3qINFzuJVBRY/edit#gid=0)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
