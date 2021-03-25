@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./ChatOptions.css";
 import { useContext } from "react";
 import { UserContext } from "./UserProvider";
@@ -63,10 +63,37 @@ async function createNewChat() {
   list.appendChild(newChat);
 }
 
+
+
+
 function ChatOptions({ selectedChat, setSelectedChat }) {
+
+  
+
   var curChat = "";
 
   const user = useContext(UserContext);
+  
+ 
+
+
+  const [chats, setChats] = useState([]);
+  
+  useEffect(() => {
+    const getData = async () => {
+      const chats = await Promise.all(
+        user.chats.map(async (chatID) => {
+          const chatDoc = await fs.collection("Chats").doc(chatID).get();
+          return { ...chatDoc.data(), id: chatID };
+        })
+      );
+      console.log(chats);
+      setChats(chats);
+    };
+    getData();
+  }, []);
+
+
 
   return (
     <div className="ChatOptions" id="window">
@@ -75,17 +102,23 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
       </button>
 
       <ul className="chatList" id="curList">
-        {user.chats &&
-          user.chats.map((chat, key) => (
+        {
+          chats.map((chat, key) => (
             <li
               key={key}
               className="chatItem"
               id={selectedChat == chat ? "clicked" : " "}
               onClick={() => {
-                setSelectedChat(chat);
+                setSelectedChat(chat.id);
+                console.log(chat);
               }}
             >
-              <div id="text">{chat.Name}</div>
+              <div id="text" >
+                
+                Name:
+                {chat.Name}
+
+              </div>
             </li>
           ))}
       </ul>

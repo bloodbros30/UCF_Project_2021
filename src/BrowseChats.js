@@ -13,10 +13,10 @@ import './userList.css'
     const [chats, setChats] = useState([]);
 
     useEffect(() => {
-        fs.collection("Chats").onSnapshot((snapshot) =>
-          setChats(snapshot.docs.map((doc) => doc.data()))
-        );
-    }, []);
+      fs.collection("Chats").onSnapshot((snapshot) =>
+        setChats(snapshot.docs.map((doc) => { return {...doc.data(), id: doc.id } }))
+      );
+  }, []);
 
 
     var curChat = "";
@@ -38,6 +38,7 @@ import './userList.css'
                 <ChatItem
                 chat= {chat}
                 user = {user}
+                chatID = {chat.id}
               />
             ))}
             

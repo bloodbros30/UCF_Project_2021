@@ -3,9 +3,9 @@ import Card from './CardsUI';
 
 //Change the photo to anything you want I just had this on hand
 
-import img1 from '../Assest/gundam1.jpg';
-import img2 from '../Assest/gundam2.jpg';
-import img3 from '../Assest/gundam3.jpg';
+import img1 from '../Assets/gundam1.jpg';
+import img2 from '../Assets/gundam2.jpg';
+import img3 from '../Assets/gundam3.jpg';
 
 
 class Cards extends Component {

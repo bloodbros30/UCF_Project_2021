@@ -3,7 +3,6 @@ body {
   height: 100%;
 }
 
-
 .ChatWindow {
     flex: .5;
     display: grid;
@@ -51,23 +50,12 @@ body {
 
   }
 
-
-
   .chatHistory{
     flex-direction: row;
     justify-content: flex-end;
-
-
-
-
-
-
   }
 
   .chatMessageMe{
-
-
-
     float:right;
     font-family: "Comic Sans MS";
     border: 1px solid black;
@@ -78,8 +66,6 @@ body {
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 10px;
-
-
 
     list-style-type: none;
 
@@ -94,21 +80,15 @@ body {
     justify-content:flex-start;
     white-space:nowrap;
 
-
     height:fit-content;
 
     position: relative;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-
   }
 
-
-
   .chatMessageOther{
-
-
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 0;
@@ -118,8 +98,6 @@ body {
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 10px;
-
-
 
     list-style-type: none;
     display: flex;
@@ -132,7 +110,6 @@ body {
     background-color: gray;
     justify-content:flex-start;
 
-
     width:fit-content;
     height:fit-content;
 
@@ -140,7 +117,6 @@ body {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-
   }
 
   .text-form {
@@ -194,32 +170,17 @@ body {
     list-style-type: none;
     justify-content: flex-end;
 
-
-
   }
 
   .refresh{
-
-
     width: 50px;
     height: 50px;
-
-
-
-
   }
 
 
   .time{
-
    color: white;
    justify-content: flex-start;
    font-size: 8px;
    font-family: inherit;
-   
-
-
-
-
-
   }

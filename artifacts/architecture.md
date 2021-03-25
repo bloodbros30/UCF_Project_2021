@@ -74,6 +74,11 @@ PROFILE PAGE
 
 The profile page has the basic functions to display your profile information and enables you to edit it. There are 3 buttons that the user can interact with, the log out button which logs them out of their account and the website, the edit profile button which will enable you to edit your details inside a test window, and the deleted profile button which will remove the account from our database.
 
+ADD CHAT PAGE
+![alt text](https://cdn.discordapp.com/attachments/803334690009382935/823385692512059402/addChatPage.png)
+
+The add chat page has three main panels, similar to the main page but with different functionalities. On the left section the user's chats are displayed in a list. On the middle section there are recommended chats that have tags matching the user's current chats with the ability to add them. The right section has a search functionality where the user can search for a chat and relevant results are displayed with the ability to add them. 
+
 | User Story                                                                                                    	| Block        	|
 |---------------------------------------------------------------------------------------------------------------	|--------------	|
 | As a consumer, I want to be able to have my own unique profile that I am able to customize.                   	| Profile Page 	|
