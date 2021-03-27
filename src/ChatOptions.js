@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "./UserProvider";
 import { fs } from "./fire";
 
+
 async function createNewChat() {
   var chatName = prompt("Enter the name of your chat: ", "your chat name here");
 
@@ -52,6 +53,30 @@ async function createNewChat() {
 
     const data = { Tags: separatedTags, Name: chatName };
 
+
+    for(var i = 0; i <= tagNumber; i++ ){
+
+      const dataPulled = await fs.collection('tags').doc(separatedTags[i]).get();
+      var newArr = dataPulled.data().chatList;
+      console.log(newArr);
+      if(newArr == null) newArr = [];
+      if(!newArr.includes(chatName)){
+        console.log("in the thing");
+        newArr.push(chatName);
+        console.log(newArr);
+        await fs.collection('tags').doc(separatedTags[i]).set({
+
+          chatList: newArr
+
+        })
+
+      }
+
+
+
+
+    }
+
     const res = await fs.collection("Chats").add(data);
   } else alert("Create new chat canceled!");
 
@@ -68,17 +93,17 @@ async function createNewChat() {
 
 function ChatOptions({ selectedChat, setSelectedChat }) {
 
-  
+
 
   var curChat = "";
 
   const user = useContext(UserContext);
-  
- 
+
+
 
 
   const [chats, setChats] = useState([]);
-  
+
   useEffect(() => {
     const getData = async () => {
       const chats = await Promise.all(
@@ -114,7 +139,7 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
               }}
             >
               <div id="text" >
-                
+
                 Name:
                 {chat.Name}
 

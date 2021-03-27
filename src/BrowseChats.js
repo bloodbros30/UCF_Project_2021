@@ -10,7 +10,7 @@ import './userList.css'
  function BrowseChats()
 {
 
-    const [chats, setChats] = useState([]);
+    var [chats, setChats] = useState([]);
 
     useEffect(() => {
       fs.collection("Chats").onSnapshot((snapshot) =>
@@ -41,10 +41,21 @@ import './userList.css'
                 chatID = {chat.id}
               />
             ))}
-            
+
         </ul>
 
+
+        <div className="ChatSearch">the chat search goes here</div>
+
+
+
+
+
       </div>
+
+
+
+
     );
 
 };

@@ -1,7 +1,7 @@
 
 import UserChatList from "./UserChatList.js";
 import BrowseChats from "./BrowseChats.js";
-
+import ChatSearch from "./ChatSearch.js";
 import './ChatPage.css'
 
 export default function ChatPage() {
@@ -9,7 +9,9 @@ export default function ChatPage() {
     <div className='ChatPage'>
       <UserChatList/>
       <BrowseChats/>
-     </div> 
+
+      <ChatSearch/>
+
+     </div>
   );
 };
-

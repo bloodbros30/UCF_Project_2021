@@ -1,3 +1,12 @@
+.chatOptions{
+
+
+  flex-direction: column;
+  flex: .20;
+  background: red;
+
+}
+
 .listWindow{
     flex-direction: column;
     flex:.20

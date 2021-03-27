@@ -7,11 +7,11 @@ import './userList.css'
 
 function UserChatList()
 {
-   
+
     const user = useContext(UserContext);
-  
+
     console.log(user);
-  
+
     return (
       <div className='listWindow'>
         <h1 className='text'>
@@ -31,8 +31,8 @@ function UserChatList()
             ))}
 
 
-     
-  
+
+
       </div>
     );
 };

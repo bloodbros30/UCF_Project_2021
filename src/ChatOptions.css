@@ -1,13 +1,22 @@
 .ChatOptions {
-    
+
     background-color: rgb(61, 60, 60);
     flex: 0.3;
     overflow-y:scroll;
-    overflow: hidden;
+
     height: 950px;
 
   }
 
+
+.ChatSearch{
+
+
+
+  flex: 0.4;
+  color: green;
+
+}
 
 .chatList{
 
@@ -16,7 +25,8 @@
   align-content: center;
   align-items: center;
   text-align: center;
-  
+
+
 
   justify-content: center;
   padding-right: 20px;
@@ -28,7 +38,7 @@
     height: auto;
     width: 100%;
     font-family: "Lato", sans-serif;
-  
+
 
 
 }
@@ -53,7 +63,7 @@
   background-color: #ac0909;
   align-content: center;
 
-  
+
 
 
 
@@ -88,4 +98,3 @@
 
 
 }
-
