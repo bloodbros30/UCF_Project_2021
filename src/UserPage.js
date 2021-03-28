@@ -24,7 +24,7 @@ function getInputVal(id){
 }
 function saveInfo(user, name, username, age, address, interests){
   console.log(user.uid);
-  fs.collection('Users').doc(user.uid).update({
+  fs.collection('Users').doc(user.uid).set({
     name: name,
     username: username,
     age: age,
