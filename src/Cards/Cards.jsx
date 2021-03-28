@@ -18,9 +18,13 @@ class Cards extends Component {
                     </div>
                     <div className="col-md-4">
                         <Card imgsrc={img2}title="Profile"/>
+                        <a href='/Profile' className='btn btn-outline-success'>
+                        Click</a>
                     </div>
                     <div className="col-md-4">
                         <Card imgsrc={img3}title="Chat Rooms"/>
+                        <a href='/Chats' className='btn btn-outline-success'>
+                             Click</a>
                     </div>
                 </div>
             </div>
