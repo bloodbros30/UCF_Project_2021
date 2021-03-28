@@ -21,11 +21,37 @@ function ChatWindow({ selectedChat }) {
 
   async function sendMessage(e) {
     e.preventDefault();
+
+
+
     if (!formValue) return;
+    //we have to grab the username from the user id here
+    var currentMessageName;
+    const req = await fs.collection('Users').doc(user.uid).get();
+    const data  = req.data();
+    if (data!= null){
+
+      console.log("data not null");
+
+      console.log(data.Name);
+      if(data.Name) {
+        console.log("I am returning a value");
+        currentMessageName = data.Name;
+        console.log(currentMessageName);
+
+      }
+      else {
+        console.log("data is null");
+        currentMessageName = "unknown username";
+      }
+
+
+    }
     await unsub.add({
       messageText: formValue,
       sentAt: firebase.firestore.FieldValue.serverTimestamp(),
       userID: user.uid,
+      Name: currentMessageName
     });
     setFormValue("");
     dummy.current.scrollIntoView({ behavior: 'smooth' });
@@ -36,12 +62,28 @@ function ChatWindow({ selectedChat }) {
     time.setSeconds(secs);
     return time.toString();
   }
+  async function getChatNamefromID( id){
+
+
+    console.log(id);
+    return  fs.collection('Chats').doc(id).get();
+
+
+
+
+
+  }
+
+
+
+
 
   return (
     <>
       <div className="ChatWindow">
-        <div className="chat-title">
-          {selectedChat}
+        <div className="chat-title" id="chatNameHere">
+
+
         </div>
 
         <form className="text-form">
@@ -83,7 +125,7 @@ function ChatWindow({ selectedChat }) {
 
                 <div>
 
-                  -by: {message.userID}
+                  -by: {message.Name}
 
                 </div>
 

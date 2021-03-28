@@ -144,6 +144,7 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
               id={selectedChat == chat ? "clicked" : " "}
               onClick={() => {
                 setSelectedChat(chat.id);
+                document.getElementById("chatNameHere").innerHTML = chat.Name;
                 console.log(chat);
               }}
             >
