@@ -1,5 +1,7 @@
 import React from 'react';
 import './card-style.css';
+import LandingPage from '../LandingPage.js'; // Used <LandingPage/> for href but that created its own page
+//Please import the remaining pages
 
 const Card = props =>{
     return(
@@ -10,10 +12,9 @@ const Card = props =>{
             <div className ='card-body text-dark'>
                 <h4 ClassName = 'card-title'>{props.title}</h4>
                 <p className='card-text.text-secondary'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis eaque sunt eos repellat iure magnam dignissimos sit, cupiditate dolorem dolore.
                 </p>
-                <a href='#' className='btn btn-outline-success'>
-                Go Anywhere</a>
+                <a href='/' className='btn btn-outline-success'>
+                Click</a>
             </div>
         </div>
     );

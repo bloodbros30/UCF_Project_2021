@@ -3,9 +3,9 @@ import Card from './CardsUI';
 
 //Change the photo to anything you want I just had this on hand
 
-import img1 from '../Assets/gundam1.jpg';
-import img2 from '../Assets/gundam2.jpg';
-import img3 from '../Assets/gundam3.jpg';
+import img1 from '../Assets/homeICON.jpg';
+import img2 from '../Assets/profile.png';
+import img3 from '../Assets/chatIcon.png';
 
 
 class Cards extends Component {
@@ -14,13 +14,17 @@ class Cards extends Component {
             <div className="container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-4">
-                        <Card imgsrc={img1}title="Console"/>
+                        <Card imgsrc={img1}title="Home"/>
                     </div>
                     <div className="col-md-4">
-                        <Card imgsrc={img2}title="Playgroud"/>
+                        <Card imgsrc={img2}title="Profile"/>
+                        <a href='/Profile' className='btn btn-outline-success'>
+                        Click</a>
                     </div>
                     <div className="col-md-4">
-                        <Card imgsrc={img3}title="Adventure"/>
+                        <Card imgsrc={img3}title="Chat Rooms"/>
+                        <a href='/Chats' className='btn btn-outline-success'>
+                             Click</a>
                     </div>
                 </div>
             </div>

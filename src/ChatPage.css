@@ -1,5 +1,6 @@
 .ChatPage{
     display: flex;
     background-color: #111;
+    width: 100%;
 
 }

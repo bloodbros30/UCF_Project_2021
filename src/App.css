@@ -1,9 +1,13 @@
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
 .App {
   display: flex;
   width: 2000px;
   height: 20000;
   margin: 0 auto;
   background-color: rgb(61, 60, 60);
+
 
 
 }

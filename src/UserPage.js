@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 import { auth, fs } from "./fire";
 import "./UserPage.css";
+import Card from './Cards/Cards'
 
 function UserPage() {
 
@@ -65,6 +66,7 @@ function saveInfo(user, name, username, age, address, interests){
                   </div>
                 </div>
               </div>
+              <Card/>
   </body>
 );
 

@@ -37,7 +37,13 @@ function handleSignIn() {
         const uid = userCredential.user.uid;
         fs.collection("Users").doc(uid).set({
           email,
-          chats: []
+          chats: [],
+          name: "Default Name",
+          username: "Default UserName",
+          age: -1,
+          address: "address",
+          interests: []
+
         });
       })
       .catch((err) => {

@@ -6,15 +6,6 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 
 export const barData = [
-  {
-    name: "Friends",
-
-    image: <PeopleIcon/>,
-
-    link: "/placeholderLink1",
-
-    flag: 2,
-  },
 
   {
     name: "Profile",

@@ -131,8 +131,8 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
 
   return (
     <div className="ChatOptions" id="window">
-      <button onClick={createNewChat} className="create">
-        Create New Chat
+      <button className="create">
+        Showing Your Chats:
       </button>
 
       <ul className="chatList" id="curList">
@@ -150,7 +150,7 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
             >
               <div id="text" >
 
-                Name:
+               
                 {chat.Name}
 
               </div>

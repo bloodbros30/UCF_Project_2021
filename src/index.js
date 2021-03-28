@@ -10,7 +10,6 @@ import Card from './Cards/Cards'
 ReactDOM.render(
   <React.StrictMode>
     <App />,
-    <Card/>,
   </React.StrictMode>,
   document.getElementById('root')
 );

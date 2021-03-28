@@ -1,9 +1,11 @@
 import react from 'react';
 import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
+import { fs } from "./fire";
 
 
 import './userList.css'
+
 
 function UserChatList()
 {
@@ -19,16 +21,21 @@ function UserChatList()
         </h1>
 
         {user && user.chats &&
-            user.chats.map((chat, key) => (
-              <li
-                key={key}
-                className="chatItem"
-                onClick={() => {
-                }}
-              >
-                <div id="text">{chat.Name}</div>
-              </li>
-            ))}
+          user.chats.map((chat, key) => (
+            <li
+              key={key}
+              className="chatItem"
+             
+              
+            >
+              <div id="text" >
+
+               
+                {chat}
+
+              </div>
+            </li>
+          ))}
 
 
 
