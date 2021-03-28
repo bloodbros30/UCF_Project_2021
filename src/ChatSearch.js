@@ -48,6 +48,11 @@ function ChatSearch()
 
     //const data = await fs.collection('tags').doc()
     setFormValue("");
+    console.log(chatList);
+
+    console.log(chatList.length);
+    if(chatList.length > 0){
+    console.log("inside query");
     query = fs.collection('Chats').where('Name', 'in', chatList);
     const test = await query.get();
     test.forEach(doc =>{
@@ -57,7 +62,7 @@ function ChatSearch()
     })
     query.onSnapshot((snapshot) =>
       setChats(snapshot.docs.map((doc) => { return {...doc.data(), id: doc.id } }))
-    );
+    ); } else (console.log("oopsSomethingbroke"));
 
   }
 
@@ -72,9 +77,9 @@ function ChatSearch()
         className="text-input"
         value={formValue}
         onChange={(e) => setFormValue(e.target.value)}
-        placeholder="Type a message..."
+        placeholder="Search..."
         rows="2"
-        placeholder="Type a message..."
+        placeholder="Search..."
         onKeyPress={(e) => {
           if (e.key === "Enter") doSearch(e);
         }}
@@ -83,7 +88,7 @@ function ChatSearch()
       </form>
 
 
-      <div>
+      <div className= "searchedList">
 
 
         <ul className="searchedChatList">

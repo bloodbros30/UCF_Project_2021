@@ -57,11 +57,14 @@ async function createNewChat() {
     for(var i = 0; i <= tagNumber; i++ ){
 
       const dataPulled = await fs.collection('tags').doc(separatedTags[i]).get();
-      var newArr = dataPulled.data().chatList;
+      //this is done to update the array as if we simply set new data it overwrites
+      var newArr = [];
+      if(dataPulled.data()!= null)
+      newArr = dataPulled.data().chatList;
       console.log(newArr);
-      if(newArr == null) newArr = [];
+
       if(!newArr.includes(chatName)){
-        console.log("in the thing");
+
         newArr.push(chatName);
         console.log(newArr);
         await fs.collection('tags').doc(separatedTags[i]).set({
@@ -73,6 +76,12 @@ async function createNewChat() {
       }
 
 
+      var tempArr = [chatName];
+      await fs.collection('tags').doc(chatName).set({
+        //this sets the chatname as its
+        chatList: tempArr
+
+      })
 
 
     }
