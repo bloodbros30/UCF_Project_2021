@@ -1,3 +1,6 @@
+body {
+	overflow: scroll; 
+  }
 .formStyle{
 font-family: 'Open Sans Condensed', arial, sans;
 width: 500px;
