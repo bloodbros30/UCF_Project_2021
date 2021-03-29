@@ -1,11 +1,12 @@
 .ChatSearchWindow {
-overflow-y: scroll;
+overflow: hidden;
 
 flex: 0.4;
 flex-direction: column;
 
 background: grey;
 align-content: flex-start;
+margin-left: 100px;
 
 
 }
