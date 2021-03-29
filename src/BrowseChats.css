@@ -1,8 +1,8 @@
 .ChatOptions{
-    flex: 0.4;
+    flex: 0.3;
     overflow: scroll;
 
- 
+
 }
 .box{
     display: grid;

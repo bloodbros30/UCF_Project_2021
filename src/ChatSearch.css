@@ -1,7 +1,7 @@
 .ChatSearchWindow {
 overflow-y: scroll;
 
-flex: 0.4;
+flex: 0.2;
 flex-direction: column;
 
 background: grey;
@@ -19,7 +19,7 @@ align-content: flex-start;
   padding-top:  10px;
   padding-bottom: 10px;
   align-self: flex-start;
-
+  width: auto;
 }
 
 .searchedList{
