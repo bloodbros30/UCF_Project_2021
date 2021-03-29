@@ -23,7 +23,7 @@ function ChatItem({ chat, user,chatID }) {
 
 
 
-    <Card bg="danger" border="dark" style={{ width: '18rem' }}>
+    <Card bg="danger" border="dark" style={{ width: '50rem' }}>
     <Card.Header>{chat.Name}</Card.Header>
     <Card.Body>
       <Card.Title>Members: mem num go here</Card.Title>

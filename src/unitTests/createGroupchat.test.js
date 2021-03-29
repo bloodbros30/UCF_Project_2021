@@ -39,4 +39,4 @@ describe('Sending Messages', () => {
     // Assert that we finally request the data
     expect(mockGet).toHaveBeenCalled();
   });
-});
+});/

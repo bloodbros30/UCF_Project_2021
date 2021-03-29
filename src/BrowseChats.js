@@ -115,7 +115,7 @@ async function createNewChat() {
 
     return (
       
-      <div className="ChatOptions" id="window">
+      <div className="BrowseChats" id="window">
 
 <button className="create" onClick={createNewChat}>
        Create New Chat

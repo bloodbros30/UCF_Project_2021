@@ -1,6 +1,6 @@
-.ChatOptions{
-    flex: 0.3;
-    overflow: scroll;
+.BrowseChats{
+    flex: 0.4;
+    overflow:hidden;
 
 
 }
@@ -8,4 +8,8 @@
     display: grid;
     grid-auto-columns: auto;
     overflow: scroll;
+}
+
+.test{
+    align-items: center;
 }

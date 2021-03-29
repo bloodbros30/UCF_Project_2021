@@ -3,7 +3,7 @@
 
     background-color: rgb(61, 60, 60);
     flex: 0.3;
-    overflow-y:hidden;
+    overflow:hidden;
 
     height: 950px;
     margin-left: 100px;

@@ -14,8 +14,7 @@ export default function ChatPage() {
 
       <ChatSearch/>
 
-      <RecommendedChats/>
-
+      
 
 
      </div>
