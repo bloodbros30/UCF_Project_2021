@@ -32,6 +32,13 @@ function saveInfo(user, name, username, age, address, interests){
     address: address,
     interests: interests
   })
+  fs.collection('Users').doc(user.uid).update({
+    name: name,
+    username: username,
+    age: age,
+    address: address,
+    interests: interests
+  })
 }
   return(
   <body>
