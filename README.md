@@ -113,7 +113,7 @@ group chat functionality and communities of people who just chat about similar t
 - [Manual Tests](https://docs.google.com/spreadsheets/d/1cl-znvVYcCL0QEF4kNXbh__SmjKL4W6cAZ4UNvIYrzA/edit#gid=0)
 - [Trello](https://trello.com/b/qaRvqV9A/project-management)
 - [Architecture & Design Documents](/artifacts/architecture.md)
-- [DEMO](https://youtu.be/s1ae0koEQFM)
+- [DEMO](https://youtu.be/WY4jhXju2uE)
 - [Unit Test Screenshots](/src/unitTests/demoScreenshot.md)
 
 
