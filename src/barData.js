@@ -29,16 +29,6 @@ export const barData = [
     flag: 2,
   },
 
-  {
-    name: "Settings",
-
-    image: <SettingsIcon/>,
-
-    link: "placeholderLink4",
-
-    flag: 2,
-  },
-
 
   {
     name: "Logout",

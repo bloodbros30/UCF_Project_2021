@@ -1,6 +1,6 @@
 .Sidebar {
   border-right: 1px solid #000000;
-  background-color: #111;
+  background-color: #0b0c10;
   flex: 0.1;
   height: 950px;
 }
@@ -31,7 +31,7 @@
   flex-direction: row;
   color: rgb(255, 255, 255);
   font-size: 10pt;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   align-content: center;
 }
 
