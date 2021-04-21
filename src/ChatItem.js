@@ -26,9 +26,9 @@ function ChatItem({ chat, user,chatID }) {
     <Card bg="danger" border="dark" style={{ width: '50rem' }}>
     <Card.Header>{chat.Name}</Card.Header>
     <Card.Body>
-      <Card.Title>Members: mem num go here</Card.Title>
+      <Card.Title></Card.Title>
       <Card.Text>
-        could add additional chat description here
+
       </Card.Text>
 
       <Button  variant="dark"  onClick={test}>Add Chat</Button>
