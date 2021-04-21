@@ -73,7 +73,6 @@ function saveInfo(user, name, username, age, address, interests){
                   </div>
                 </div>
               </div>
-              <Card/>
   </body>
 );
 
