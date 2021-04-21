@@ -58,9 +58,13 @@ function ChatWindow({ selectedChat }) {
   }
 
   function createDate(secs ){
-    var time = new Date(1970, 0, 1);
-    time.setSeconds(secs);
-    return time.toString();
+
+    var now = new Date(1970, 0, 1);
+    now.setSeconds(secs);
+
+    var date = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+    return  date+' '+ "at " + time;
   }
   async function getChatNamefromID( id){
 
@@ -118,7 +122,7 @@ function ChatWindow({ selectedChat }) {
                 {message.messageText}
                 <br/>
                 <div className= "time">
-                  Sent at {message.sentAt && createDate(message.sentAt.seconds)}
+                  Sent on {message.sentAt && createDate(message.sentAt.seconds)}
                 </div>
 
                 <br/>

@@ -57,7 +57,7 @@ body {
   }
 
   .chatMessageMe{
-    float:right;
+    
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 0;
@@ -150,7 +150,7 @@ body {
     color: #330;
     font-size: 1rem;
   }
-  
+
   .chat-title {
     grid-area: chat-title;
     border-radius: 0 15px 0 0;
