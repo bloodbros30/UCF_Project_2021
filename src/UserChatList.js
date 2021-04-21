@@ -2,15 +2,40 @@ import react from 'react';
 import { useContext } from 'react';
 import { UserContext } from "./UserProvider";
 import { fs } from "./fire";
-
+import React, { useEffect,useState } from "react";
 
 import './userList.css'
 
 
-function UserChatList()
+function UserChatList({selectedChat})
 {
 
-    const user = useContext(UserContext);
+var dummyvariable = "dumb";
+const user = useContext(UserContext);
+
+
+const [chats, setChats] = useState([]);
+  useEffect(() => {
+
+
+
+      const getData = async () => {
+
+        const chats = await Promise.all(
+          user.chats.map(async (chatID) => {
+            const chatDoc = await fs.collection("Chats").doc(chatID).get();
+            return { ...chatDoc.data(), id: chatID };
+          })
+        );
+        console.log(chats);
+        setChats(chats);
+      };
+      getData();
+
+  }, []);
+
+
+
 
     console.log(user);
 
@@ -21,7 +46,7 @@ function UserChatList()
         </h1>
 
         {user && user.chats &&
-          user.chats.map((chat, key) => (
+          chats.map((chat, key) => (
             <li
               key={key}
               className="chatItem"
@@ -31,7 +56,7 @@ function UserChatList()
               <div id="text" >
 
 
-                {chat}
+                {chat.Name}
 
               </div>
             </li>
