@@ -58,13 +58,12 @@ function ChatWindow({ selectedChat }) {
   }
 
   function createDate(secs ){
-
     var now = new Date(1970, 0, 1);
     now.setSeconds(secs);
 
-    var date = now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
-var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-    return  date+' '+ "at " + time;
+    var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+
+    return time;
   }
   async function getChatNamefromID( id){
 
@@ -72,15 +71,7 @@ var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
     console.log(id);
     return  fs.collection('Chats').doc(id).get();
 
-
-
-
-
   }
-
-
-
-
 
   return (
     <>
@@ -122,7 +113,7 @@ var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
                 {message.messageText}
                 <br/>
                 <div className= "time">
-                  Sent on {message.sentAt && createDate(message.sentAt.seconds)}
+                  {message.sentAt && createDate(message.sentAt.seconds)}
                 </div>
 
                 <br/>

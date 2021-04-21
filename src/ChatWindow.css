@@ -2,7 +2,14 @@ html,
 body {
   height: 100%;
 }
-
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 .ChatWindow {
     flex: .5;
     display: grid;
@@ -51,51 +58,31 @@ body {
 
   }
 
-  .chatHistory{
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+  .chatMessageMe {
 
-  .chatMessageMe{
-    
-    font-family: "Comic Sans MS";
-    border: 1px solid black;
-    padding: 0;
-    height: auto;
-    width: 50%;
-
-    font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 10px;
-
-    list-style-type: none;
-
-    display:flex;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    margin-left: 1%;
+    margin-right: 3%;
     flex-direction: row;
     color: black;
-    font-size: 10pt;
+    font-size: 1.2rem;
     background-color:  #3d99fc;
-    justify-content:flex-start;
+    justify-content: flex-end;
+    justify-items: end;
     white-space:nowrap;
+    align-self: flex-end;
 
+    width: fit-content;
     height:fit-content;
-
-    position: relative;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+
   }
 
-  .chatMessageOther{
-    font-family: "Comic Sans MS";
-    border: 1px solid black;
-    padding: 0;
-    height: auto;
-    width: 50%;
-
+  .chatMessageOther {
     font-family: "Comic Sans MS";
     border: 1px solid black;
     padding: 10px;
@@ -104,20 +91,36 @@ body {
     display: flex;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
-    margin-left: 1%;
+    margin-left: 3%;
     flex-direction: row;
-    color: blac k;
-    font-size: 10pt;
+    color: black;
+    font-size: 1.2rem;
     background-color: gray;
-    justify-content:flex-start;
+    justify-content:start;
 
-    width:fit-content;
+    width: fit-content;
     height:fit-content;
 
     position: relative;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
+  }
+
+  .chat-message-list {
+    display: flex;
+    grid-area: msglist;
+    overflow: scroll;
+    list-style-type: none;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .chatHistory {
+    display: flex;
+    grid-area: msglist;
+    list-style-type: none;
+    flex-direction: column;
   }
 
   .text-form {
@@ -150,26 +153,22 @@ body {
     color: #330;
     font-size: 1rem;
   }
-
+  
   .chat-title {
     grid-area: chat-title;
     border-radius: 0 15px 0 0;
     border-top: none;
-  }
 
-  .conversation-list {
+    padding: 18px;
+    text-align: center;
+  
     color: white;
-    grid-area: convolist;
-    border-top: none;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 2.3em;;
   }
 
-  .chat-message-list {
-    grid-area: msglist;
-    overflow-y:scroll;
-    list-style-type: none;
-    justify-content: flex-end;
 
-  }
 
   .refresh{
     width: 50px;
@@ -179,7 +178,8 @@ body {
 
   .time{
    color: white;
-   justify-content: flex-start;
-   font-size: 8px;
+   justify-content: end;
+   font-size: .8rem;
    font-family: inherit;
+   float: right;
   }
