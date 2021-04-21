@@ -33,10 +33,10 @@ function ChatWindow({ selectedChat }) {
 
       console.log("data not null");
 
-      console.log(data.Name);
-      if(data.Name) {
+      console.log(data.username);
+      if(data.username) {
         console.log("I am returning a value");
-        currentMessageName = data.Name;
+        currentMessageName = data.username;
         console.log(currentMessageName);
 
       }

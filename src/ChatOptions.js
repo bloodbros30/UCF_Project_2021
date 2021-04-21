@@ -95,6 +95,7 @@ async function createNewChat() {
   newChat.innerHTML = chatName;
   newChat.classList.add("chatItem");
   list.appendChild(newChat);
+
 }
 
 
@@ -114,6 +115,7 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
   const [chats, setChats] = useState([]);
 
   useEffect(() => {
+    console.log("haha i'm ddos'ing firebase");
     const getData = async () => {
       const chats = await Promise.all(
         user.chats.map(async (chatID) => {
@@ -150,7 +152,7 @@ function ChatOptions({ selectedChat, setSelectedChat }) {
             >
               <div id="text" >
 
-               
+
                 {chat.Name}
 
               </div>
