@@ -111,19 +111,14 @@ function ChatWindow({ selectedChat }) {
               >
               <p>
                 {message.messageText}
-                <br/>
-                <div className= "time">
-                  {message.sentAt && createDate(message.sentAt.seconds)}
-                </div>
-
-                <br/>
-
                 <div>
 
-                  -by: {message.Name}
+                  - {message.Name}
 
                 </div>
-
+                  <div className="time">
+                    {message.sentAt && createDate(message.sentAt.seconds)}
+                  </div>
               </p>
               </li>
             ))}

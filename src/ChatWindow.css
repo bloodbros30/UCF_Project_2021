@@ -59,11 +59,11 @@ html {
   }
 
   .chatMessageMe {
-
+    width: 40%;
     border: 1px solid black;
     padding: 10px;
     margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-bottom: 1.5%;
     margin-right: 3%;
     flex-direction: row;
     color: black;
@@ -83,14 +83,11 @@ html {
   }
 
   .chatMessageOther {
-    font-family: "Comic Sans MS";
+    width: 40%;
     border: 1px solid black;
     padding: 10px;
-
-    list-style-type: none;
-    display: flex;
     margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-bottom: 1.5%;
     margin-left: 3%;
     flex-direction: row;
     color: black;
@@ -101,7 +98,6 @@ html {
     width: fit-content;
     height:fit-content;
 
-    position: relative;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -177,9 +173,11 @@ html {
 
 
   .time{
-   color: white;
-   justify-content: end;
-   font-size: .8rem;
-   font-family: inherit;
-   float: right;
+    color: white;
+    justify-content: end;
+    font-size: .8rem;
+    font-family: inherit;
+    float: right;
+
+    position: relative;
   }
